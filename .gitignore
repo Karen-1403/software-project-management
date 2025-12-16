@@ -1,0 +1,104 @@
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.synctex.gz
+*.synctex(busy)
+*.pdfsync
+
+# LaTeX intermediate files
+*.dvi
+*.xdv
+*-converted-to.*
+
+# BibTeX files
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# Build directories
+build/
+dist/
+out/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# PDF output (comment out if you want to track PDFs)
+# main.pdf
+
+# Package manager
+*.fdb_latexmk
+
+# Glossaries
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.lzo
+*.lzs
+
+# Hyperref
+*.brf
+
+# knitr
+*-concordance.tex
+
+# Listings
+*.lol
+
+# Nomenclature
+*.nlg
+*.nlo
+*.nls
+
+# Revision control
+*.~[0-9]*
+
+# Thumbnails
+._*
+
+# Python (if using any scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+
+# Note: Keep the images folder but ignore specific temporary files
+images/*.tmp
+images/*-old.*

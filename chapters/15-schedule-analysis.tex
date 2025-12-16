@@ -1,0 +1,235 @@
+% ============================================================================
+% CHAPTER 14: SCHEDULE ANALYSIS (ES, EF, LS, LF, FLOAT)
+% ============================================================================
+
+\chapter{Schedule Analysis: ES, EF, LS, LF, and Float}
+
+\vspace{12pt}
+
+\noindent This chapter presents detailed schedule analysis calculations including Early Start (ES), Early Finish (EF), Late Start (LS), Late Finish (LF), Free Float, and Total Float for all project activities.
+
+% ============================================================================
+\section{Schedule Calculation Overview}
+
+\subsection{Definitions}
+
+\begin{description}[leftmargin=3cm, style=nextline]
+    \item[ES (Early Start)] The earliest time an activity can start, considering all predecessors
+    \item[EF (Early Finish)] ES + Duration (earliest time an activity can finish)
+    \item[LS (Late Start)] Latest time an activity can start without delaying the project
+    \item[LF (Late Finish)] LS + Duration (latest time an activity can finish without project delay)
+    \item[Total Float] LF - EF or LS - ES (maximum delay without delaying project)
+    \item[Free Float] Minimum ES of successors - EF (delay without delaying successors)
+\end{description}
+
+\subsection{Calculation Methods}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Forward Pass:} Calculate ES and EF from project start to finish
+    \item \textbf{Backward Pass:} Calculate LS and LF from project finish to start
+    \item \textbf{Float Calculations:} Determine scheduling flexibility for each activity
+\end{itemize}
+
+% ============================================================================
+\section{Complete Schedule Analysis Table}
+
+\begin{landscape}
+
+\begin{table}[H]
+\centering
+\caption{Complete Schedule Analysis with ES, EF, LS, LF, and Float}
+\scriptsize
+\begin{tabularx}{\linewidth}{|l|X|c|l|c|c|c|c|c|c|l|}
+\hline
+\textbf{ID} & \textbf{Activity} & \textbf{Dur.} & \textbf{Predecessors} & \textbf{ES} & \textbf{EF} & \textbf{LS} & \textbf{LF} & \textbf{TF} & \textbf{FF} & \textbf{Critical?} \\
+ & & \textbf{(wks)} & & & & & & & & \\
+\hline
+A & Project Initiation & 2 & - & 0 & 2 & 0 & 2 & 0 & 0 & Yes \\
+\hline
+B & Requirements Gathering & 4 & A & 2 & 6 & 2 & 6 & 0 & 0 & Yes \\
+\hline
+C & Requirements Documentation & 2 & B & 6 & 8 & 6 & 8 & 0 & 0 & Yes \\
+\hline
+D & System Architecture Design & 3 & C & 8 & 11 & 8 & 11 & 0 & 0 & Yes \\
+\hline
+E & Database Design & 2 & C & 8 & 10 & 9 & 11 & 1 & 1 & No \\
+\hline
+F & UI/UX Design & 3 & C & 8 & 11 & 9 & 12 & 1 & 1 & No \\
+\hline
+G & Backend Dev Setup & 1 & D, E & 11 & 12 & 11 & 12 & 0 & 0 & Yes \\
+\hline
+H & Prerequisite Engine Dev & 3 & G & 12 & 15 & 12 & 15 & 0 & 0 & Yes \\
+\hline
+I & Conflict Detection Module & 2 & G & 12 & 14 & 13 & 15 & 1 & 1 & No \\
+\hline
+J & Waitlist Management & 2 & G & 12 & 14 & 13 & 15 & 1 & 1 & No \\
+\hline
+K & Registration Workflow & 3 & H, I, J & 15 & 18 & 15 & 18 & 0 & 0 & Yes \\
+\hline
+L & Frontend Dev Setup & 1 & F & 11 & 12 & 12 & 13 & 1 & 1 & No \\
+\hline
+M & Student Portal Dev & 4 & L & 12 & 16 & 13 & 17 & 1 & 1 & No \\
+\hline
+N & Admin Dashboard Dev & 3 & L & 12 & 15 & 14 & 17 & 2 & 2 & No \\
+\hline
+O & Course Catalog Interface & 2 & L & 12 & 14 & 15 & 17 & 3 & 0 & No \\
+\hline
+P & Timetable Builder & 3 & O & 14 & 17 & 15 & 18 & 1 & 1 & No \\
+\hline
+Q & Frontend-Backend Integration & 2 & K, M, N, P & 18 & 20 & 18 & 20 & 0 & 0 & Yes \\
+\hline
+R & SIS Integration & 2 & Q & 20 & 22 & 20 & 22 & 0 & 0 & Yes \\
+\hline
+S & Authentication Integration & 1 & Q & 20 & 21 & 21 & 22 & 1 & 1 & No \\
+\hline
+T & Email Notification System & 1 & Q & 20 & 21 & 21 & 22 & 1 & 1 & No \\
+\hline
+U & Unit Testing & 2 & K, Q & 20 & 22 & 20 & 22 & 0 & 0 & No* \\
+\hline
+V & Integration Testing & 2 & R, S, T, U & 22 & 24 & 22 & 24 & 0 & 0 & Yes \\
+\hline
+W & System Testing & 2 & V & 24 & 26 & 24 & 26 & 0 & 0 & Yes \\
+\hline
+X & Performance Testing & 1 & W & 26 & 27 & 27 & 28 & 1 & 1 & No \\
+\hline
+Y & Security Testing & 1 & W & 26 & 27 & 27 & 28 & 1 & 1 & No \\
+\hline
+Z & User Acceptance Testing & 2 & W, X, Y & 27 & 29 & 27 & 29 & 0 & 0 & Yes \\
+\hline
+AA & Deployment Planning & 1 & Z & 29 & 30 & 29 & 30 & 0 & 0 & Yes \\
+\hline
+AB & Production Deployment & 1 & AA & 30 & 31 & 30 & 31 & 0 & 0 & Yes \\
+\hline
+AC & Training Material Dev & 2 & W & 26 & 28 & 29 & 31 & 3 & 3 & No \\
+\hline
+AD & Training Delivery & 1 & AB, AC & 31 & 32 & 31 & 32 & 0 & 0 & Yes \\
+\hline
+AE & Go-Live Support & 2 & AD & 32 & 34 & 32 & 34 & 0 & 0 & Yes \\
+\hline
+AF & Project Closure & 1 & AE & 34 & 35 & 34 & 35 & 0 & 0 & Yes \\
+\hline
+\end{tabularx}
+\end{table}
+
+\par \textit{*U is on a parallel critical path with zero float}
+
+\end{landscape}
+
+% ============================================================================
+\section{Critical Path Activities}
+
+\par Activities with Total Float = 0 form the critical path(s):
+
+\begin{center}
+\textbf{Primary Critical Path:} \\
+A → B → C → D → G → H → K → Q → R → V → W → Z → AA → AB → AD → AE → AF \\
+\vspace{0.5cm}
+\textbf{Parallel Critical Path:} \\
+A → B → C → D → G → H → K → Q → U → V → W → Z → AA → AB → AD → AE → AF
+\end{center}
+
+\par \textbf{Total Project Duration: 35 weeks}
+
+% ============================================================================
+\section{Float Analysis}
+
+\subsection{Activities with Total Float > 0}
+
+\begin{table}[H]
+\centering
+\caption{Non-Critical Activities with Scheduling Flexibility}
+\begin{tabular}{|l|l|c|l|}
+\hline
+\textbf{Activity ID} & \textbf{Activity Name} & \textbf{Total Float} & \textbf{Implication} \\
+ & & \textbf{(weeks)} & \\
+\hline
+AC & Training Material Development & 3 & Can be delayed without impact \\
+\hline
+O & Course Catalog Interface & 3 & Low priority for resources \\
+\hline
+N & Admin Dashboard Development & 2 & Some flexibility \\
+\hline
+E & Database Design & 1 & Near-critical, monitor closely \\
+\hline
+F & UI/UX Design & 1 & Near-critical, monitor closely \\
+\hline
+I & Conflict Detection Module & 1 & Near-critical, monitor closely \\
+\hline
+J & Waitlist Management & 1 & Near-critical, monitor closely \\
+\hline
+L & Frontend Dev Setup & 1 & Near-critical, monitor closely \\
+\hline
+M & Student Portal Development & 1 & Near-critical, monitor closely \\
+\hline
+P & Timetable Builder & 1 & Near-critical, monitor closely \\
+\hline
+S & Authentication Integration & 1 & Near-critical, monitor closely \\
+\hline
+T & Email Notification System & 1 & Near-critical, monitor closely \\
+\hline
+X & Performance Testing & 1 & Near-critical, monitor closely \\
+\hline
+Y & Security Testing & 1 & Near-critical, monitor closely \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Near-Critical Activities}
+
+\par Activities with Total Float ≤ 1 week are considered near-critical and require close monitoring:
+
+\begin{itemize}[leftmargin=*]
+    \item Any delay in these activities could make them critical
+    \item Resource prioritization should favor these after critical activities
+    \item Weekly status monitoring recommended
+    \item Consider adding buffer resources if delays occur
+\end{itemize}
+
+% ============================================================================
+\section{Schedule Compression Opportunities}
+
+\subsection{Fast-Tracking Opportunities}
+
+\par Activities that could potentially overlap:
+
+\begin{enumerate}[leftmargin=*]
+    \item Database Design (E) could start during Requirements Documentation (C) - saves 1 week
+    \item UI/UX Design (F) could start during Requirements Documentation (C) - saves 1 week
+    \item Training Material Development (AC) has 3 weeks float - can be done earlier
+\end{enumerate}
+
+\subsection{Crashing Opportunities}
+
+\par Critical activities that could be shortened by adding resources:
+
+\begin{table}[H]
+\centering
+\caption{Crashing Analysis for Critical Activities}
+\begin{tabular}{|l|c|c|c|r|}
+\hline
+\textbf{Activity} & \textbf{Normal} & \textbf{Crashed} & \textbf{Time} & \textbf{Cost} \\
+ & \textbf{Duration} & \textbf{Duration} & \textbf{Saved} & \textbf{Increase} \\
+\hline
+H (Prerequisite Engine) & 3 weeks & 2 weeks & 1 week & 50,000 EGP \\
+\hline
+K (Registration Workflow) & 3 weeks & 2 weeks & 1 week & 50,000 EGP \\
+\hline
+M (Student Portal) & 4 weeks & 3 weeks & 1 week & 40,000 EGP \\
+\hline
+W (System Testing) & 2 weeks & 1.5 weeks & 0.5 week & 30,000 EGP \\
+\hline
+\end{tabularx>
+\end{table}
+
+% ============================================================================
+\section{Schedule Management Recommendations}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Focus on Critical Path:} Prioritize resources for critical activities (TF = 0)
+    \item \textbf{Monitor Near-Critical:} Weekly tracking of activities with TF ≤ 1 week
+    \item \textbf{Utilize Float Strategically:} Use non-critical activities as resource buffers
+    \item \textbf{Early Warning System:} Alert when critical activities show signs of delay
+    \item \textbf{Resource Leveling:} Use float to smooth resource demands
+    \item \textbf{Buffer Management:} Protect critical path with schedule buffers
+    \item \textbf{Fast-Track Carefully:} Only overlap activities when risks are acceptable
+\end{enumerate}

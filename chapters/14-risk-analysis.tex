@@ -1,0 +1,302 @@
+% ============================================================================
+% CHAPTER 13: RISK ANALYSIS
+% ============================================================================
+
+\chapter{Risk Analysis}
+
+\vspace{12pt}
+
+\noindent This chapter presents a comprehensive risk analysis for the Online Course Registration Portal project, including risk identification, assessment, probability-impact matrix, and mitigation strategies.
+
+% ============================================================================
+\section{Risk Management Overview}
+
+\par Risk management is a systematic process of identifying, analyzing, and responding to project risks to increase the probability of positive events and decrease the probability of negative events.
+
+\subsection{Risk Management Process}
+
+\begin{enumerate}[leftmargin=*]
+    \item Risk Identification
+    \item Risk Analysis (Qualitative and Quantitative)
+    \item Risk Response Planning
+    \item Risk Monitoring and Control
+\end{enumerate}
+
+% ============================================================================
+\section{Risk Identification}
+
+\par The following risks have been identified across various project categories:
+
+\subsection{Technical Risks}
+
+\begin{table}[H]
+\centering
+\caption{Technical Risks}
+\small
+\begin{tabularx}{\textwidth}{|c|X|c|c|}
+\hline
+\textbf{ID} & \textbf{Risk Description} & \textbf{Probability} & \textbf{Impact} \\
+\hline
+T1 & Integration with legacy student information system fails or is more complex than anticipated & High & High \\
+\hline
+T2 & Prerequisite validation logic contains errors leading to incorrect enrollments & Medium & High \\
+\hline
+T3 & System performance degrades under peak concurrent user load & Medium & High \\
+\hline
+T4 & Timetable conflict detection algorithm produces false positives/negatives & Medium & Medium \\
+\hline
+T5 & Security vulnerabilities discovered in production & Low & High \\
+\hline
+T6 & Database scalability issues as data volume grows & Low & Medium \\
+\hline
+T7 & Third-party API dependencies become unavailable & Low & High \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Resource Risks}
+
+\begin{table}[H]
+\centering
+\caption{Resource Risks}
+\small
+\begin{tabularx}{\textwidth}{|c|X|c|c|}
+\hline
+\textbf{ID} & \textbf{Risk Description} & \textbf{Probability} & \textbf{Impact} \\
+\hline
+R1 & Key developers leave project mid-development & Medium & High \\
+\hline
+R2 & Insufficient QA resources during testing phase & Medium & Medium \\
+\hline
+R3 & Stakeholders not available for requirements validation and UAT & Medium & Medium \\
+\hline
+R4 & Lack of expertise in specific required technologies & Low & Medium \\
+\hline
+R5 & DevOps engineer unavailable during critical deployment phase & Low & High \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Schedule Risks}
+
+\begin{table}[H]
+\centering
+\caption{Schedule Risks}
+\small
+\begin{tabularx}{\textwidth}{|c|X|c|c|}
+\hline
+\textbf{ID} & \textbf{Risk Description} & \textbf{Probability} & \textbf{Impact} \\
+\hline
+S1 & Requirements gathering takes longer than estimated due to stakeholder unavailability & High & Medium \\
+\hline
+S2 & Integration testing reveals major defects requiring significant rework & Medium & High \\
+\hline
+S3 & UAT approval delayed due to discovered issues & Medium & High \\
+\hline
+S4 & Deployment delayed due to production environment not ready & Low & High \\
+\hline
+S5 & Training schedule conflicts with academic calendar & Medium & Low \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Budget/Cost Risks}
+
+\begin{table}[H]
+\centering
+\caption{Budget and Cost Risks}
+\small
+\begin{tabularx}{\textwidth}{|c|X|c|c|}
+\hline
+\textbf{ID} & \textbf{Risk Description} & \textbf{Probability} & \textbf{Impact} \\
+\hline
+C1 & Project costs exceed budget due to scope creep & Medium & Medium \\
+\hline
+C2 & Additional licensing costs for required third-party software & Medium & Low \\
+\hline
+C3 & Infrastructure costs higher than estimated & Low & Medium \\
+\hline
+C4 & Extended timeline increases personnel costs & Medium & Medium \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{External Risks}
+
+\begin{table}[H]
+\centering
+\caption{External Risks}
+\small
+\begin{tabularx}{\textwidth}{|c|X|c|c|}
+\hline
+\textbf{ID} & \textbf{Risk Description} & \textbf{Probability} & \textbf{Impact} \\
+\hline
+E1 & Changes in data protection regulations require system modifications & Low & Medium \\
+\hline
+E2 & University policy changes affect registration business rules & Medium & Medium \\
+\hline
+E3 & Vendor discontinues support for critical technology component & Low & High \\
+\hline
+E4 & Cyber-security threats or attacks during go-live period & Low & High \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Organizational Risks}
+
+\begin{table}[H]
+\centering
+\caption{Organizational Risks}
+\small
+\begin{tabularx}{\textwidth}{|c|X|c|c|}
+\hline
+\textbf{ID} & \textbf{Risk Description} & \textbf{Probability} & \textbf{Impact} \\
+\hline
+O1 & Resistance to change from staff accustomed to manual processes & High & Medium \\
+\hline
+O2 & Students experience difficulty adapting to new system & Medium & Medium \\
+\hline
+O3 & Insufficient executive support during implementation challenges & Low & High \\
+\hline
+O4 & Competing priorities divert attention from project & Medium & Medium \\
+\hline
+\end{tabularx}
+\end{table}
+
+% ============================================================================
+\section{Risk Probability-Impact Matrix}
+
+\subsection{Risk Rating Scale}
+
+\begin{table}[H]
+\centering
+\caption{Probability and Impact Scales}
+\begin{tabular}{|l|l|c|l|}
+\hline
+\multicolumn{2}{|l|}{\textbf{Probability}} & \multicolumn{2}{l|}{\textbf{Impact}} \\
+\hline
+Very Low & < 10\% & Very Low & Minimal impact on objectives \\
+\hline
+Low & 10-30\% & Low & Minor impact, easily managed \\
+\hline
+Medium & 30-50\% & Medium & Moderate impact, requires attention \\
+\hline
+High & 50-70\% & High & Significant impact, major concern \\
+\hline
+Very High & > 70\% & Very High & Severe impact, project success threatened \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Probability-Impact Matrix}
+
+\begin{figure}[H]
+    \centering
+    % Insert risk matrix diagram
+    % \includegraphics[width=0.9\textwidth]{images/risk-matrix.pdf}
+    \caption{Risk Probability-Impact Matrix}
+    \label{fig:risk-matrix}
+\end{figure}
+
+\par \textit{Note: Create a 5x5 risk matrix with:}
+\begin{itemize}[leftmargin=*]
+    \item Y-axis: Probability (Very Low to Very High)
+    \item X-axis: Impact (Very Low to Very High)
+    \item Color coding: Green (Low Risk), Yellow (Medium Risk), Orange (High Risk), Red (Critical Risk)
+    \item Plot all identified risks on the matrix using their IDs
+\end{itemize}
+
+% ============================================================================
+\section{Risk Prioritization}
+
+\begin{table}[H]
+\centering
+\caption{High-Priority Risks Requiring Immediate Attention}
+\begin{tabular}{|c|l|c|}
+\hline
+\textbf{Risk ID} & \textbf{Description} & \textbf{Risk Score} \\
+\hline
+T1 & SIS Integration complexity & 0.60 × 0.80 = 0.48 \\
+\hline
+T3 & Performance under load & 0.40 × 0.80 = 0.32 \\
+\hline
+S2 & Integration testing defects & 0.40 × 0.80 = 0.32 \\
+\hline
+S3 & UAT approval delays & 0.40 × 0.80 = 0.32 \\
+\hline
+R1 & Key developer departure & 0.40 × 0.80 = 0.32 \\
+\hline
+O1 & Resistance to change & 0.60 × 0.50 = 0.30 \\
+\hline
+\end{tabular}
+\end{table}
+
+% ============================================================================
+\section{Risk Response Planning}
+
+\subsection{High-Priority Risk Mitigation Strategies}
+
+\begin{table}[H]
+\centering
+\caption{Risk Response Strategies}
+\small
+\begin{tabularx}{\textwidth}{|c|X|X|l|}
+\hline
+\textbf{ID} & \textbf{Mitigation Strategy} & \textbf{Contingency Plan} & \textbf{Owner} \\
+\hline
+T1 & Early prototype integration; dedicated integration specialist; extra time buffer & Use manual data transfer procedures temporarily & TL, SA \\
+\hline
+T3 & Load testing in early phases; scalable architecture; CDN implementation & Add server capacity; optimize code & SA, DO \\
+\hline
+S2 & Continuous integration testing; code reviews; automated testing & Extend testing phase; add QA resources & QA Lead \\
+\hline
+S3 & Early stakeholder engagement; pilot testing; clear UAT criteria & Fast-track critical fixes; phased rollout & PM, BA \\
+\hline
+R1 & Cross-training; documentation; knowledge sharing sessions; competitive compensation & Contract backup developers; redistribute work & PM, TL \\
+\hline
+O1 & Change management program; early user involvement; training; communication plan & Executive intervention; additional support & PM, TR \\
+\hline
+\end{tabularx}
+\end{table}
+
+% ============================================================================
+\section{Risk Monitoring and Control}
+
+\subsection{Risk Tracking}
+
+\begin{itemize}[leftmargin=*]
+    \item Monthly risk register review
+    \item Weekly tracking of top 10 risks
+    \item Risk status reporting in project status meetings
+    \item Trigger conditions defined for each risk
+    \item Risk owners assigned and accountable
+\end{itemize}
+
+\subsection{Risk Escalation Criteria}
+
+\begin{enumerate}[leftmargin=*]
+    \item Risk probability or impact increases significantly
+    \item Risk mitigation strategy proves ineffective
+    \item New high-impact risks emerge
+    \item Multiple risks materialize simultaneously
+    \item Risk threatens critical project objectives
+\end{enumerate}
+
+% ============================================================================
+\section{Contingency Reserves}
+
+\begin{table}[H]
+\centering
+\caption{Contingency Reserve Allocation}
+\begin{tabular}{|l|r|l|}
+\hline
+\textbf{Reserve Type} & \textbf{Amount} & \textbf{Purpose} \\
+\hline
+Schedule Reserve & 2 weeks & Buffer for schedule risks \\
+\hline
+Budget Reserve & 145,000 EGP (10\%) & Cost overrun protection \\
+\hline
+Resource Reserve & 2 backup developers & Critical resource backup \\
+\hline
+\end{tabular}
+\end{table}

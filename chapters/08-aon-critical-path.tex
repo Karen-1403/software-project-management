@@ -1,0 +1,335 @@
+% ============================================================================
+% CHAPTER 7: ACTIVITY ON NODE (AON) AND CRITICAL PATH
+% ============================================================================
+
+\chapter{Activity on Node (AON) Network and Critical Path}
+
+\vspace{12pt}
+
+\noindent This chapter presents the Activity-on-Node (AON) network diagram for the project, showing activity dependencies and relationships. Resource assignments for each activity are identified, and the critical path is determined along with the total project duration.
+
+% ============================================================================
+\section{AON Network Diagram Overview}
+
+\par The Activity-on-Node (AON) network diagram uses nodes to represent activities and arrows to show dependencies. This technique helps visualize the project workflow, identify critical activities, and determine the minimum project duration.
+
+\subsection{AON Diagram Conventions}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Nodes:} Rectangles representing project activities
+    \item \textbf{Arrows:} Dependencies showing precedence relationships
+    \item \textbf{Node Information:} Activity ID, name, duration, resources
+    \item \textbf{Critical Path:} Highlighted in red or bold
+    \item \textbf{Start/Finish:} Special nodes for project start and finish
+\end{itemize}
+
+% ============================================================================
+\section{Activity List with Resources}
+
+\par The following table lists all major project activities with their durations, predecessors, and assigned resources.
+
+\begin{landscape}
+
+\begin{table}[H]
+\centering
+\caption{Activity List with Durations, Dependencies, and Resource Assignments}
+\small
+\begin{tabularx}{\linewidth}{|l|X|c|l|X|}
+\hline
+\textbf{Activity ID} & \textbf{Activity Name} & \textbf{Duration (weeks)} & \textbf{Predecessors} & \textbf{Assigned Resources} \\
+\hline
+A & Project Initiation & 2 & - & Project Manager, Business Analyst \\
+\hline
+B & Requirements Gathering & 4 & A & Business Analyst (2), Stakeholders \\
+\hline
+C & Requirements Documentation & 2 & B & Business Analyst, Technical Writer \\
+\hline
+D & System Architecture Design & 3 & C & System Architect, Senior Developer \\
+\hline
+E & Database Design & 2 & C & Database Administrator, Data Architect \\
+\hline
+F & UI/UX Design & 3 & C & UI/UX Designer (2), Graphic Designer \\
+\hline
+G & Backend Development Setup & 1 & D, E & Senior Developer, DevOps Engineer \\
+\hline
+H & Prerequisite Engine Development & 3 & G & Senior Developer (2) \\
+\hline
+I & Conflict Detection Module & 2 & G & Senior Developer, Junior Developer \\
+\hline
+J & Waitlist Management System & 2 & G & Senior Developer \\
+\hline
+K & Registration Workflow Implementation & 3 & H, I, J & Senior Developer (2), Junior Developer \\
+\hline
+L & Frontend Development Setup & 1 & F & Frontend Developer, DevOps Engineer \\
+\hline
+M & Student Portal Development & 4 & L & Frontend Developer (2), UI Developer \\
+\hline
+N & Admin Dashboard Development & 3 & L & Frontend Developer, UI Developer \\
+\hline
+O & Course Catalog Interface & 2 & L & Frontend Developer, UI Developer \\
+\hline
+P & Timetable Builder Component & 3 & O & Frontend Developer (2) \\
+\hline
+Q & Frontend-Backend Integration & 2 & K, M, N, P & Full-stack Developer (2) \\
+\hline
+R & SIS Integration & 2 & Q & Integration Specialist, Senior Developer \\
+\hline
+S & Authentication Integration & 1 & Q & Security Engineer, Developer \\
+\hline
+T & Email Notification System & 1 & Q & Developer, System Administrator \\
+\hline
+U & Unit Testing & 2 & K, Q & QA Engineer (2), Developers \\
+\hline
+V & Integration Testing & 2 & R, S, T, U & QA Engineer (3), Test Lead \\
+\hline
+W & System Testing & 2 & V & QA Engineer (3), Test Lead \\
+\hline
+X & Performance Testing & 1 & W & Performance Engineer, QA Engineer \\
+\hline
+Y & Security Testing & 1 & W & Security Engineer, QA Engineer \\
+\hline
+Z & User Acceptance Testing & 2 & W, X, Y & Business Analyst, End Users, QA Lead \\
+\hline
+AA & Deployment Planning & 1 & Z & DevOps Engineer, System Administrator \\
+\hline
+AB & Production Deployment & 1 & AA & DevOps Engineer, DBA, SysAdmin \\
+\hline
+AC & Training Material Development & 2 & W & Technical Writer, Training Specialist \\
+\hline
+AD & Training Delivery & 1 & AB, AC & Trainer (2), Support Staff \\
+\hline
+AE & Go-Live Support & 2 & AD & Support Team (3), Developers (2) \\
+\hline
+AF & Project Closure & 1 & AE & Project Manager, Team Leads \\
+\hline
+\end{tabularx}
+\end{table}
+
+\end{landscape}
+
+% ============================================================================
+\section{AON Network Diagram}
+
+\begin{landscape}
+
+\begin{figure}[H]
+    \centering
+    % Insert AON diagram created in MS Visio
+    % The diagram should show all activities as nodes with arrows showing dependencies
+    % Critical path should be highlighted
+    % \includegraphics[width=\linewidth]{images/aon-diagram.pdf}
+    \caption{Activity-on-Node (AON) Network Diagram with Resource Assignments}
+    \label{fig:aon-diagram}
+\end{figure}
+
+\par \textit{Note: Create a professional AON network diagram using MS Visio with the following elements:}
+\begin{itemize}[leftmargin=*]
+    \item Rectangular nodes for each activity showing: Activity ID, Name, Duration, Resources
+    \item Directional arrows showing dependencies
+    \item Critical path highlighted in red or with bold borders
+    \item Clear layout showing parallel and sequential activities
+    \item Start and Finish milestone nodes
+    \item Legend explaining symbols and highlighting
+\end{itemize}
+
+\end{landscape}
+
+% ============================================================================
+\section{Critical Path Analysis}
+
+\subsection{Critical Path Identification}
+
+\par The critical path is the longest sequence of dependent activities that determines the minimum project duration. Any delay in critical path activities will delay the entire project.
+
+\subsubsection{Critical Path Activities}
+
+\par Based on the AON network analysis, the critical path consists of the following activities:
+
+\begin{center}
+\textbf{A → B → C → D → G → H → K → Q → R → V → W → Z → AA → AB → AD → AE → AF}
+\end{center}
+
+\begin{table}[H]
+\centering
+\caption{Critical Path Activities}
+\begin{tabular}{|l|l|c|}
+\hline
+\textbf{Activity ID} & \textbf{Activity Name} & \textbf{Duration (weeks)} \\
+\hline
+A & Project Initiation & 2 \\
+\hline
+B & Requirements Gathering & 4 \\
+\hline
+C & Requirements Documentation & 2 \\
+\hline
+D & System Architecture Design & 3 \\
+\hline
+G & Backend Development Setup & 1 \\
+\hline
+H & Prerequisite Engine Development & 3 \\
+\hline
+K & Registration Workflow Implementation & 3 \\
+\hline
+Q & Frontend-Backend Integration & 2 \\
+\hline
+R & SIS Integration & 2 \\
+\hline
+V & Integration Testing & 2 \\
+\hline
+W & System Testing & 2 \\
+\hline
+Z & User Acceptance Testing & 2 \\
+\hline
+AA & Deployment Planning & 1 \\
+\hline
+AB & Production Deployment & 1 \\
+\hline
+AD & Training Delivery & 1 \\
+\hline
+AE & Go-Live Support & 2 \\
+\hline
+AF & Project Closure & 1 \\
+\hline
+\multicolumn{2}{|r|}{\textbf{Total Critical Path Duration:}} & \textbf{34 weeks} \\
+\hline
+\end{tabular}
+\end{table}
+
+% ============================================================================
+\subsection{Total Project Duration}
+
+\par \textbf{The total project duration, determined by the critical path, is 34 weeks.}
+
+\par This represents the minimum time required to complete the project assuming:
+\begin{itemize}[leftmargin=*]
+    \item All resources are available as planned
+    \item No significant delays or issues occur
+    \item All dependencies are correctly identified
+    \item Work proceeds according to estimates
+\end{itemize}
+
+% ============================================================================
+\subsection{Near-Critical Paths}
+
+\par Activities that are not on the critical path but have minimal float are considered near-critical and require close monitoring:
+
+\begin{table}[H]
+\centering
+\caption{Near-Critical Paths}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Activity Sequence} & \textbf{Total Duration} \\
+\hline
+A → B → C → F → L → M → Q → R → V → W → Z → AA → AB → AD → AE → AF & 33 weeks \\
+\hline
+A → B → C → E → G → H → K → Q → R → V → W → Z → AA → AB → AD → AE → AF & 33 weeks \\
+\hline
+\end{tabular}
+\end{table}
+
+\par These paths have only 1 week of total float and could become critical if any delays occur.
+
+% ============================================================================
+\section{Resource Analysis}
+
+\subsection{Resource Requirements by Activity}
+
+\begin{table}[H]
+\centering
+\caption{Resource Allocation Summary}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Resource Type} & \textbf{Peak Requirement} & \textbf{Critical Path Activities} \\
+\hline
+Project Manager & 1 & A, AF \\
+\hline
+Business Analyst & 2 & B, C \\
+\hline
+System Architect & 1 & D \\
+\hline
+Senior Developer & 2 & D, G, H, K, R \\
+\hline
+Frontend Developer & 2 & M, N, O, P \\
+\hline
+QA Engineer & 3 & V, W \\
+\hline
+DevOps Engineer & 1 & G, AA, AB \\
+\hline
+Database Administrator & 1 & E, AB \\
+\hline
+Integration Specialist & 1 & R \\
+\hline
+Security Engineer & 1 & S, Y \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Critical Resource Constraints}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Senior Developers:} Required for multiple critical path activities; any shortage will delay project
+    \item \textbf{QA Engineers:} Peak load during testing phases; must be available in sufficient numbers
+    \item \textbf{Integration Specialist:} Single point of dependency for SIS integration (critical path activity R)
+    \item \textbf{DevOps Engineer:} Required for deployment activities; backup resource recommended
+\end{itemize}
+
+% ============================================================================
+\section{Critical Path Management Strategies}
+
+\subsection{Risk Mitigation for Critical Activities}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Resource Allocation Priority:} Assign best resources to critical path activities
+    \item \textbf{Close Monitoring:} Daily tracking of critical path activity progress
+    \item \textbf{Early Problem Detection:} Implement early warning systems for delays
+    \item \textbf{Fast-Tracking:} Overlap activities where possible without compromising quality
+    \item \textbf{Crashing:} Add resources to critical activities if schedule slips
+    \item \textbf{Buffer Management:} Maintain time buffers before key milestones
+\end{enumerate}
+
+\subsection{Schedule Compression Techniques}
+
+\par If the project schedule needs to be compressed:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Fast-Track:} Overlap Requirements Documentation (C) with Architecture Design (D) start
+    \item \textbf{Fast-Track:} Begin Integration Testing (V) planning during development
+    \item \textbf{Crash:} Add developers to Prerequisite Engine (H) and Registration Workflow (K)
+    \item \textbf{Crash:} Increase QA team size for System Testing (W)
+    \item \textbf{Parallel Work:} Execute Performance (X) and Security Testing (Y) in parallel
+\end{itemize}
+
+% ============================================================================
+\section{Float Analysis Summary}
+
+\par Detailed float calculations for all activities are provided in Chapter 14. Key observations:
+
+\begin{itemize}[leftmargin=*]
+    \item Critical path activities have zero total float
+    \item UI/UX Design (F) and related frontend activities have 1 week float
+    \item Database Design (E) has 1 week float
+    \item Email Notification System (T) has 2 weeks float
+    \item Training Material Development (AC) has some flexibility due to parallel path
+\end{itemize}
+
+% ============================================================================
+\section{Dependencies and Constraints}
+
+\subsection{Internal Dependencies}
+
+\begin{itemize}[leftmargin=*]
+    \item Backend development requires completed database and architecture design
+    \item Integration activities require both backend and frontend completion
+    \item Testing phases have sequential dependencies (unit → integration → system → UAT)
+    \item Deployment requires successful UAT completion
+\end{itemize}
+
+\subsection{External Dependencies}
+
+\begin{itemize}[leftmargin=*]
+    \item Student Information System API availability (Activity R)
+    \item University authentication system access (Activity S)
+    \item Email server configuration (Activity T)
+    \item Production environment provisioning (Activity AB)
+    \item Stakeholder availability for UAT (Activity Z)
+\end{itemize}

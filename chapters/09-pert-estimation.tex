@@ -1,0 +1,223 @@
+% ============================================================================
+% CHAPTER 8: PERT TIME ESTIMATION
+% ============================================================================
+
+\chapter{PERT Time Estimation}
+
+\vspace{12pt}
+
+\noindent This chapter presents the Program Evaluation and Review Technique (PERT) time estimates for project activities. PERT uses three-point estimation to account for uncertainty in activity durations.
+
+% ============================================================================
+\section{PERT Overview}
+
+\par PERT is a statistical tool that uses three time estimates for each activity:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Optimistic Time (O):} Minimum time if everything goes perfectly
+    \item \textbf{Most Likely Time (M):} Most realistic time estimate
+    \item \textbf{Pessimistic Time (P):} Maximum time if significant problems occur
+\end{itemize}
+
+\subsection{PERT Formulas}
+
+\par \textbf{Expected Time (TE):}
+\begin{equation}
+TE = \frac{O + 4M + P}{6}
+\end{equation}
+
+\par \textbf{Standard Deviation (σ):}
+\begin{equation}
+\sigma = \frac{P - O}{6}
+\end{equation}
+
+\par \textbf{Variance (σ²):}
+\begin{equation}
+\sigma^2 = \left(\frac{P - O}{6}\right)^2
+\end{equation}
+
+% ============================================================================
+\section{PERT Time Estimates for All Activities}
+
+\begin{landscape}
+
+\begin{table}[H]
+\centering
+\caption{PERT Three-Point Time Estimates}
+\small
+\begin{tabularx}{\linewidth}{|l|X|c|c|c|c|c|c|}
+\hline
+\textbf{ID} & \textbf{Activity Name} & \textbf{O} & \textbf{M} & \textbf{P} & \textbf{TE} & \textbf{σ} & \textbf{σ²} \\
+ & & \textbf{(weeks)} & \textbf{(weeks)} & \textbf{(weeks)} & \textbf{(weeks)} & & \\
+\hline
+A & Project Initiation & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+\hline
+B & Requirements Gathering & 3.0 & 4.0 & 6.0 & 4.17 & 0.50 & 0.25 \\
+\hline
+C & Requirements Documentation & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+\hline
+D & System Architecture Design & 2.0 & 3.0 & 5.0 & 3.17 & 0.50 & 0.25 \\
+\hline
+E & Database Design & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+\hline
+F & UI/UX Design & 2.0 & 3.0 & 5.0 & 3.17 & 0.50 & 0.25 \\
+\hline
+G & Backend Development Setup & 0.5 & 1.0 & 1.5 & 1.00 & 0.17 & 0.03 \\
+\hline
+H & Prerequisite Engine Development & 2.0 & 3.0 & 5.0 & 3.17 & 0.50 & 0.25 \\
+\hline
+I & Conflict Detection Module & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+\hline
+J & Waitlist Management System & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+\hline
+K & Registration Workflow Implementation & 2.0 & 3.0 & 5.0 & 3.17 & 0.50 & 0.25 \\
+\hline
+L & Frontend Development Setup & 0.5 & 1.0 & 1.5 & 1.00 & 0.17 & 0.03 \\
+\hline
+M & Student Portal Development & 3.0 & 4.0 & 6.0 & 4.17 & 0.50 & 0.25 \\
+\hline
+N & Admin Dashboard Development & 2.0 & 3.0 & 5.0 & 3.17 & 0.50 & 0.25 \\
+\hline
+O & Course Catalog Interface & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+\hline
+P & Timetable Builder Component & 2.0 & 3.0 & 5.0 & 3.17 & 0.50 & 0.25 \\
+\hline
+Q & Frontend-Backend Integration & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+\hline
+R & SIS Integration & 1.5 & 2.0 & 4.0 & 2.25 & 0.42 & 0.17 \\
+\hline
+S & Authentication Integration & 0.5 & 1.0 & 2.0 & 1.08 & 0.25 & 0.06 \\
+\hline
+T & Email Notification System & 0.5 & 1.0 & 2.0 & 1.08 & 0.25 & 0.06 \\
+\hline
+U & Unit Testing & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+\hline
+V & Integration Testing & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+\hline
+W & System Testing & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+\hline
+X & Performance Testing & 0.5 & 1.0 & 2.0 & 1.08 & 0.25 & 0.06 \\
+\hline
+Y & Security Testing & 0.5 & 1.0 & 2.0 & 1.08 & 0.25 & 0.06 \\
+\hline
+Z & User Acceptance Testing & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+\hline
+AA & Deployment Planning & 0.5 & 1.0 & 1.5 & 1.00 & 0.17 & 0.03 \\
+\hline
+AB & Production Deployment & 0.5 & 1.0 & 2.0 & 1.08 & 0.25 & 0.06 \\
+\hline
+AC & Training Material Development & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+\hline
+AD & Training Delivery & 0.5 & 1.0 & 1.5 & 1.00 & 0.17 & 0.03 \\
+\hline
+AE & Go-Live Support & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+\hline
+AF & Project Closure & 0.5 & 1.0 & 1.5 & 1.00 & 0.17 & 0.03 \\
+\hline
+\end{tabularx}
+\end{table}
+
+\end{landscape}
+
+% ============================================================================
+\section{Critical Path PERT Analysis}
+
+\par Calculating the expected duration and variance for the critical path:
+
+\begin{table}[H]
+\centering
+\caption{Critical Path PERT Summary}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Metric} & \textbf{Value} & \textbf{Unit} \\
+\hline
+Sum of Expected Times (TE) & 34.75 & weeks \\
+\hline
+Sum of Variances (Σσ²) & 1.79 & weeks² \\
+\hline
+Critical Path Standard Deviation & 1.34 & weeks \\
+\hline
+\end{tabular}
+\end{table}
+
+% ============================================================================
+\section{Project Duration Probability Analysis}
+
+\par Using the PERT analysis, we can calculate probabilities for project completion times.
+
+\subsection{Z-Score Calculations}
+
+\par For a target completion time (T), the Z-score is:
+\begin{equation}
+Z = \frac{T - TE_{total}}{\sigma_{critical path}}
+\end{equation}
+
+\subsection{Probability Scenarios}
+
+\begin{table}[H]
+\centering
+\caption{Probability of Completing Project by Target Date}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Target Duration} & \textbf{Z-Score} & \textbf{Probability} & \textbf{Confidence} \\
+\textbf{(weeks)} & & & \\
+\hline
+33 & -1.31 & 9.5\% & Very Low \\
+\hline
+34 & -0.56 & 28.8\% & Low \\
+\hline
+35 & 0.19 & 57.5\% & Moderate \\
+\hline
+36 & 0.93 & 82.4\% & High \\
+\hline
+37 & 1.68 & 95.4\% & Very High \\
+\hline
+38 & 2.43 & 99.2\% & Near Certain \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Interpretation}
+
+\begin{itemize}[leftmargin=*]
+    \item There is approximately 57.5\% probability of completing in 35 weeks
+    \item For 82.4\% confidence, allow 36 weeks (2 weeks buffer)
+    \item For 95\% confidence level, plan for 37 weeks completion
+    \item Original estimate of 34 weeks has only 28.8\% probability of success
+\end{itemize}
+
+% ============================================================================
+\section{Recommendations}
+
+\par Based on PERT analysis:
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Add Buffer Time:} Include 2-3 weeks buffer for high confidence
+    \item \textbf{Monitor High-Variance Activities:} Focus on activities with σ > 0.40
+    \item \textbf{Early Start Critical Activities:} Begin prerequisite engine and requirements early
+    \item \textbf{Resource Backup Plans:} Have contingency for integration activities
+    \item \textbf{Regular Re-estimation:} Update PERT estimates as project progresses
+\end{enumerate}
+
+% ============================================================================
+\section{Risk-Based Schedule Buffer}
+
+\begin{table}[H]
+\centering
+\caption{Recommended Schedule Buffers}
+\begin{tabular}{|l|c|l|}
+\hline
+\textbf{Confidence Level} & \textbf{Buffer} & \textbf{Rationale} \\
+\hline
+70\% & 1 week & Minimum acceptable buffer \\
+\hline
+80\% & 2 weeks & Recommended for this project \\
+\hline
+90\% & 2.5 weeks & Conservative estimate \\
+\hline
+95\% & 3 weeks & Very conservative, high assurance \\
+\hline
+\end{tabular}
+\end{table}
+
+\par \textbf{Recommendation:} Adopt a 36-week project timeline (34.75 + 2 weeks buffer) for approximately 82\% confidence in meeting the deadline.

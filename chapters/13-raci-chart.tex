@@ -1,0 +1,248 @@
+% ============================================================================
+% CHAPTER 12: RACI CHART
+% ============================================================================
+
+\chapter{RACI Chart}
+
+\vspace{12pt}
+
+\noindent This chapter presents the RACI (Responsible, Accountable, Consulted, Informed) matrix for the Online Course Registration Portal project, clearly defining roles and responsibilities for all project activities and deliverables.
+
+% ============================================================================
+\section{RACI Matrix Overview}
+
+\par The RACI matrix is a responsibility assignment matrix that clarifies roles for each task and deliverable:
+
+\begin{description}[leftmargin=2cm, style=nextline]
+    \item[R - Responsible] Person(s) who perform the work to complete the task
+    \item[A - Accountable] Person who is ultimately answerable for the correct completion (only one A per task)
+    \item[C - Consulted] People who provide input and with whom there is two-way communication
+    \item[I - Informed] People who are kept up-to-date on progress (one-way communication)
+\end{description}
+
+% ============================================================================
+\section{Project Roles}
+
+\begin{table}[H]
+\centering
+\caption{Project Roles and Responsibilities}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Role} & \textbf{Description} \\
+\hline
+PM & Project Manager - Overall project leadership and coordination \\
+\hline
+PS & Project Sponsor - Executive oversight and funding approval \\
+\hline
+BA & Business Analyst - Requirements gathering and documentation \\
+\hline
+SA & System Architect - Technical architecture and design leadership \\
+\hline
+TL & Technical Lead - Development team leadership \\
+\hline
+DEV & Development Team - Software developers (backend and frontend) \\
+\hline
+QA & QA Team - Testing and quality assurance personnel \\
+\hline
+DBA & Database Administrator - Database design and management \\
+\hline
+UX & UX/UI Designer - User experience and interface design \\
+\hline
+DO & DevOps Engineer - Infrastructure and deployment \\
+\hline
+SM & Security Manager - Security requirements and testing \\
+\hline
+AA & Academic Affairs - Business stakeholder representative \\
+\hline
+IT & IT Department - Infrastructure and support services \\
+\hline
+TR & Trainer - Training development and delivery \\
+\hline
+TW & Technical Writer - Documentation specialist \\
+\hline
+\end{tabularx}
+\end{table}
+
+% ============================================================================
+\section{RACI Matrix}
+
+\begin{landscape}
+
+\begin{table}[H]
+\centering
+\caption{RACI Matrix for Project Activities}
+\tiny
+\begin{tabularx}{\linewidth}{|X|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Activity / Deliverable} & \textbf{PM} & \textbf{PS} & \textbf{BA} & \textbf{SA} & \textbf{TL} & \textbf{DEV} & \textbf{QA} & \textbf{DBA} & \textbf{UX} & \textbf{DO} & \textbf{SM} & \textbf{AA} & \textbf{IT} & \textbf{TR} & \textbf{TW} \\
+\hline
+\multicolumn{16}{|l|}{\textbf{Project Initiation}} \\
+\hline
+Project Charter & R & A & C & C & I & I & I & I & I & I & I & C & I & I & I \\
+\hline
+Project Plan & A & I & C & C & C & I & C & I & I & C & I & I & I & I & I \\
+\hline
+Stakeholder Analysis & R & C & R & I & I & I & I & I & I & I & I & C & C & I & I \\
+\hline
+\multicolumn{16}{|l|}{\textbf{Requirements and Analysis}} \\
+\hline
+Requirements Gathering & C & I & A & C & I & I & C & I & C & I & C & R & I & I & I \\
+\hline
+Requirements Documentation & C & I & A & C & I & I & C & I & I & I & I & C & I & I & R \\
+\hline
+Business Rules Definition & I & I & A & C & I & I & I & I & I & I & I & R & I & I & C \\
+\hline
+\multicolumn{16}{|l|}{\textbf{System Design}} \\
+\hline
+System Architecture & C & I & C & A & R & C & I & C & C & C & C & I & C & I & I \\
+\hline
+Database Design & C & I & C & C & C & I & I & A & I & I & I & I & C & I & I \\
+\hline
+UI/UX Design & C & I & C & I & I & I & I & I & A & I & I & C & I & I & I \\
+\hline
+Security Design & C & I & I & C & C & I & I & I & I & I & A & I & C & I & I \\
+\hline
+\multicolumn{16}{|l|}{\textbf{Development}} \\
+\hline
+Backend Development & C & I & I & C & A & R & I & C & I & I & C & I & I & I & I \\
+\hline
+Frontend Development & C & I & I & C & A & R & I & I & C & I & I & I & I & I & I \\
+\hline
+Database Implementation & C & I & I & C & C & C & I & A & I & I & I & I & C & I & I \\
+\hline
+System Integration & C & I & C & C & A & R & C & I & I & C & C & I & C & I & I \\
+\hline
+\multicolumn{16}{|l|}{\textbf{Testing}} \\
+\hline
+Test Planning & C & I & C & I & C & C & A & I & I & I & C & I & I & I & I \\
+\hline
+Unit Testing & I & I & I & I & C & R & A & I & I & I & I & I & I & I & I \\
+\hline
+Integration Testing & C & I & C & C & C & C & A & I & I & C & C & C & C & I & I \\
+\hline
+System Testing & C & I & C & C & C & I & A & I & I & I & C & C & I & I & I \\
+\hline
+Performance Testing & C & I & I & C & C & I & A & I & I & C & C & I & C & I & I \\
+\hline
+Security Testing & C & I & I & C & C & I & R & I & I & I & A & I & C & I & I \\
+\hline
+UAT & C & I & R & I & C & C & C & I & I & I & I & A & C & I & I \\
+\hline
+\multicolumn{16}{|l|}{\textbf{Deployment}} \\
+\hline
+Deployment Planning & A & I & I & C & C & I & I & I & I & R & C & I & C & I & I \\
+\hline
+Production Deployment & C & I & I & I & C & C & C & R & I & A & C & I & R & I & I \\
+\hline
+Go-Live Support & A & I & C & C & R & R & R & C & I & R & C & I & R & I & I \\
+\hline
+\multicolumn{16}{|l|}{\textbf{Training and Documentation}} \\
+\hline
+User Documentation & C & I & C & I & I & I & I & I & C & I & I & C & I & C & A \\
+\hline
+Technical Documentation & C & I & I & C & R & C & I & C & I & C & C & I & I & I & A \\
+\hline
+Training Materials & C & I & C & I & I & I & I & I & I & I & I & C & I & A & R \\
+\hline
+Training Delivery & C & I & I & I & C & C & I & I & I & I & I & C & C & A & C \\
+\hline
+\multicolumn{16}{|l|}{\textbf{Project Closure}} \\
+\hline
+Lessons Learned & A & C & R & C & C & C & C & C & C & C & C & C & C & C & C \\
+\hline
+Final Report & A & I & C & C & C & I & I & I & I & I & I & I & I & I & R \\
+\hline
+Project Sign-off & R & A & I & I & I & I & I & I & I & I & I & C & I & I & I \\
+\hline
+\end{tabularx}
+\end{table}
+
+\end{landscape}
+
+% ============================================================================
+\section{RACI Analysis and Validation}
+
+\subsection{Matrix Validation Rules}
+
+\par The RACI matrix has been validated against the following rules:
+
+\begin{enumerate}[leftmargin=*]
+    \item Each task has exactly one "Accountable" (A) person
+    \item Each task has at least one "Responsible" (R) person
+    \item No single person is both R and A for the same task (where avoidable)
+    \item Appropriate stakeholders are Consulted (C) or Informed (I)
+    \item No gaps - all tasks have clear ownership
+\end{enumerate}
+
+\subsection{Key Accountability Assignments}
+
+\begin{table}[H]
+\centering
+\caption{Primary Accountabilities by Role}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Role} & \textbf{Primary Accountabilities} \\
+\hline
+Project Sponsor & Project charter, UAT approval, final sign-off \\
+\hline
+Project Manager & Project plan, schedule, budget, overall delivery \\
+\hline
+Business Analyst & Requirements documentation and validation \\
+\hline
+System Architect & System architecture and technical design \\
+\hline
+Technical Lead & Development activities and code quality \\
+\hline
+Database Administrator & Database design and implementation \\
+\hline
+QA Team Lead & Test planning and execution, quality assurance \\
+\hline
+UX Designer & User interface and experience design \\
+\hline
+DevOps Engineer & Infrastructure and deployment \\
+\hline
+Security Manager & Security requirements and testing \\
+\hline
+Academic Affairs & Business rules, UAT leadership \\
+\hline
+Trainer & Training materials and delivery \\
+\hline
+Technical Writer & All documentation deliverables \\
+\hline
+\end{tabular}
+\end{table}
+
+% ============================================================================
+\section{Communication Implications}
+
+\par The RACI matrix informs the communication plan:
+
+\subsection{Consulted (C) Relationships}
+
+\begin{itemize}[leftmargin=*]
+    \item Require two-way communication and active collaboration
+    \item Input needed before decisions or completion
+    \item Regular meetings and reviews scheduled
+    \item Timely feedback mechanisms established
+\end{itemize}
+
+\subsection{Informed (I) Relationships}
+
+\begin{itemize}[leftmargin=*]
+    \item One-way communication (status updates)
+    \item Progress reports and notifications
+    \item Inclusion in status meetings as observers
+    \item Access to project documentation repository
+\end{itemize}
+
+% ============================================================================
+\section{Conflict Resolution}
+
+\par When responsibilities overlap or conflicts arise:
+
+\begin{enumerate}[leftmargin=*]
+    \item The "Accountable" person has final decision authority
+    \item Project Manager mediates conflicts between "Responsible" parties
+    \item Project Sponsor resolves escalated conflicts
+    \item RACI matrix updates require Project Manager and Sponsor approval
+\end{enumerate}
