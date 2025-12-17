@@ -1,8 +1,8 @@
 % ============================================================================
-% CHAPTER 3: PROJECT TIME, SCOPE, AND COST CONSTRAINTS
+% CHAPTER 3: PROJECT CONSTRAINTS
 % ============================================================================
 
-\chapter{Project Time, Scope, and Cost Constraints}
+\chapter[Project Constraints]{Project Time, Scope, and Cost Constraints}
 
 \vspace{12pt}
 
@@ -16,23 +16,27 @@
 \subsection{Project Duration}
 
 \begin{itemize}[leftmargin=*]
-    \item \textbf{Total Project Duration:} [X] months (e.g., 8 months)
-    \item \textbf{Project Start Date:} [Insert Date]
-    \item \textbf{Project Completion Date:} [Insert Date]
-    \item \textbf{Production Deployment Date:} Must be completed [X] weeks before registration period begins
+    \item \textbf{Total Project Duration:} 6.5 months (28 weeks)
+    \item \textbf{Project Start Date:} March 1, 2026
+    \item \textbf{Project Completion Date:} September 15, 2026
+    \item \textbf{Production Deployment Date:} August 31, 2026 (4 weeks before registration period)
 \end{itemize}
 
 \subsection{Critical Deadlines}
 
 \begin{enumerate}[leftmargin=*]
-    \item \textbf{Requirements Finalization:} Week 4
-    \item \textbf{Design Approval:} Week 8
-    \item \textbf{Development Completion:} Week 20
-    \item \textbf{Testing Completion:} Week 26
-    \item \textbf{User Training:} Week 28
-    \item \textbf{System Go-Live:} Week 30
-    \item \textbf{Registration Period Start:} Week 32 (hard deadline)
+    \item \textbf{Requirements Finalization:} Week 3 (March 21, 2026)
+    \item \textbf{Design Approval:} Week 6 (April 11, 2026)
+    \item \textbf{Development Completion:} Week 16 (June 19, 2026)
+    \item \textbf{Testing Completion:} Week 21 (July 24, 2026)
+    \item \textbf{User Training:} Week 23 (August 7, 2026)
+    \item \textbf{System Go-Live (Production Deployment):} Week 26 (August 28, 2026)
+    \item \textbf{Post-Deployment Stabilization \& Support:} Weeks 27-28 (August 29 - September 15, 2026)
+    \item \textbf{Project Closure:} Week 28 (September 15, 2026)
+    \item \textbf{Registration Period Start:} October 1, 2026 
 \end{enumerate}
+
+
 
 \subsection{Time Constraint Factors}
 
@@ -49,7 +53,7 @@
 \begin{itemize}[leftmargin=*]
     \item \textbf{Buffer Time:} 2 weeks built into schedule for unforeseen delays
     \item \textbf{Fast-Tracking Opportunities:} Some testing activities can overlap with development
-    \item \textbf{Crashing Possibilities:} Additional resources can be allocated to critical path activities if needed
+    \item \textbf{Resource Flexibility:} Additional resources can be allocated to critical path activities if needed
     \item \textbf{Non-Negotiable Deadline:} Final deployment must occur before registration period
 \end{itemize}
 
@@ -67,7 +71,7 @@
     \begin{itemize}
         \item Student login and authentication
         \item Course browsing and search
-        \item Course registration (add/drop/swap)
+        \item Course registration (add/drop/withdraw)
         \item Prerequisite validation
         \item Timetable conflict detection
         \item Waitlist management
@@ -96,6 +100,7 @@
         \item Integration with student information system
         \item Integration with authentication system
         \item Integration with email notification system
+        \item Integration limited to existing systems via documented APIs
     \end{itemize}
     
     \item \textbf{Documentation and Training}
@@ -112,34 +117,20 @@
 \par The following features are explicitly excluded from the current project scope:
 
 \begin{enumerate}[leftmargin=*]
-    \item Mobile native applications (iOS/Android)
+    \item Mobile native applications (iOS/Android), Web-based interface only (no desktop application)
     \item Grade reporting and transcript generation
-    \item Financial aid integration
     \item Tuition payment processing
-    \item Degree audit and graduation planning
     \item Course evaluation and feedback system
     \item Social features (student forums, course reviews)
-    \item Integration with learning management systems (LMS)
     \item Advanced analytics and predictive modeling
-    \item Multi-language support (English only in initial release)
 \end{enumerate}
-
-\subsection{Scope Boundaries}
-
-\begin{itemize}[leftmargin=*]
-    \item System will support undergraduate courses only (graduate courses excluded)
-    \item Maximum of [X] course sections per semester
-    \item Support for single campus only (multi-campus excluded)
-    \item Web-based interface only (no desktop application)
-    \item Integration limited to existing systems via documented APIs
-\end{itemize}
 
 \subsection{Scope Change Management}
 
 \begin{itemize}[leftmargin=*]
     \item All scope changes must go through formal change control process
     \item Impact analysis required for all change requests (time, cost, quality)
-    \item Project sponsor approval required for scope changes exceeding [X] EGP or [Y] days
+    \item Project sponsor approval required for scope changes 
     \item Scope changes may result in timeline or budget adjustments
     \item Change request log maintained throughout project lifecycle
 \end{itemize}
@@ -158,19 +149,28 @@
 \hline
 \textbf{Category} & \textbf{Budget (EGP)} & \textbf{Percentage} \\
 \hline
-Personnel Costs & [Amount] & XX\% \\
+Personnel Costs & 180,000 & 51.4\% \\
+\quad - Project Manager & 45,000 & 12.9\% \\
+\quad - Development Team & 95,000 & 27.1\% \\
+\quad - QA and Testing Staff & 40,000 & 11.4\% \\
 \hline
-Infrastructure and Hardware & [Amount] & XX\% \\
+Infrastructure and Hardware & 50,000 & 14.3\% \\
+\quad - Server Infrastructure and Equipment & 30,000 & 8.6\% \\
+\quad - Development and Testing Environment & 20,000 & 5.7\% \\
 \hline
-Software and Licenses & [Amount] & XX\% \\
+Software and Licenses & 35,000 & 10.0\% \\
+\quad - Development Tools & 20,000 & 5.7\% \\
+\quad - Database and Server Licenses & 15,000 & 4.3\% \\
 \hline
-Training and Documentation & [Amount] & XX\% \\
+Training and Documentation & 40,000 & 11.4\% \\
+\quad - Training Materials and Sessions & 25,000 & 7.1\% \\
+\quad - Documentation Development & 15,000 & 4.3\% \\
 \hline
-Testing and Quality Assurance & [Amount] & XX\% \\
+Testing and Quality Assurance & 10,000 & 2.9\% \\
 \hline
-Contingency Reserve & [Amount] & 10\% \\
+Contingency Reserve (10\%) & 35,000 & 10.0\% \\
 \hline
-\textbf{Total Budget} & \textbf{[Total Amount]} & \textbf{100\%} \\
+\textbf{Total Budget} & \textbf{350,000} & \textbf{100\%} \\
 \hline
 \end{tabular}
 \end{table}
@@ -178,19 +178,18 @@ Contingency Reserve & [Amount] & 10\% \\
 \subsection{Budget Constraints and Limitations}
 
 \begin{enumerate}[leftmargin=*]
-    \item \textbf{Fixed Budget:} Total project cost cannot exceed [Amount] EGP
+    \item \textbf{Target Budget:} 350,000 EGP
+    \item \textbf{Maximum Budget Ceiling:} 367,500 EGP (350,000 + 5\% variance allowance)
+    \item \textbf{Budget Approval:} Any expenditure exceeding 350,000 EGP requires project sponsor approval
     \item \textbf{Funding Phases:} Budget released in quarterly installments
-    \item \textbf{Personnel Costs:} Limited to [X] full-time equivalent resources
     \item \textbf{Infrastructure:} Must utilize existing university infrastructure where possible
     \item \textbf{Procurement:} All purchases must follow university procurement policies
-    \item \textbf{Currency:} All costs calculated in Egyptian Pounds (EGP)
+
 \end{enumerate}
 
 \subsection{Cost Assumptions}
 
 \begin{itemize}[leftmargin=*]
-    \item Inflation rate of approximately X\% per annum
-    \item Exchange rates remain stable for any foreign currency transactions
     \item No significant market price fluctuations for technology components
     \item University provides existing infrastructure at no additional cost
     \item Open-source software utilized where appropriate to minimize licensing costs
@@ -199,10 +198,11 @@ Contingency Reserve & [Amount] & 10\% \\
 \subsection{Budget Variance Tolerance}
 
 \begin{itemize}[leftmargin=*]
-    \item \textbf{Acceptable Variance:} ±5\% of total budget
-    \item \textbf{Category Variance:} Up to 10\% variance between categories with approval
-    \item \textbf{Contingency Usage:} Requires project manager approval
-    \item \textbf{Budget Overrun:} Requires project sponsor approval and may trigger scope reduction
+    \item \textbf{Total Budget Variance:} Up to +5\% (17,500 EGP) above target budget of 350,000 EGP with sponsor approval
+    \item \textbf{Category Variance:} Individual budget categories may vary by ±10\% through reallocation, provided total budget remains within approved limits
+    \item \textbf{Category Reallocation:} Requires project manager approval for variances up to 10,000 EGP; sponsor approval for larger reallocations
+    \item \textbf{Contingency Usage:} Requires project manager approval and must be documented with justification
+    \item \textbf{Budget Overrun Prevention:} Regular monitoring and early escalation required when approaching variance thresholds
 \end{itemize}
 
 % ============================================================================
@@ -235,19 +235,17 @@ Contingency Reserve & [Amount] & 10\% \\
     \begin{itemize}
         \item Consider reducing scope (move non-critical features to Phase 2)
         \item Allocate additional resources (increase cost)
-        \item Fast-track or crash critical activities
     \end{itemize}
     
     \item \textbf{If budget is at risk:}
     \begin{itemize}
         \item Reduce scope to fit within budget
-        \item Extend timeline to reduce resource intensity
         \item Utilize more cost-effective resources or technologies
     \end{itemize}
     
     \item \textbf{If scope must expand:}
     \begin{itemize}
-        \item Request additional budget and/or timeline extension
+        \item Request additional budget 
         \item Evaluate impact on quality and prioritize features
         \item Consider phased implementation approach
     \end{itemize}
@@ -262,7 +260,7 @@ Contingency Reserve & [Amount] & 10\% \\
     \item \textbf{Schedule Performance Index (SPI):} Monitored weekly
     \item \textbf{Cost Performance Index (CPI):} Monitored bi-weekly
     \item \textbf{Scope Completion:} Measured against WBS deliverables
-    \item \textbf{Earned Value Analysis:} Conducted monthly
+
 \end{itemize}
 
 \subsection{Reporting Requirements}
@@ -270,8 +268,17 @@ Contingency Reserve & [Amount] & 10\% \\
 \begin{itemize}[leftmargin=*]
     \item Weekly status reports on schedule adherence
     \item Bi-weekly budget variance reports
-    \item Monthly comprehensive project status reports
-    \item Immediate escalation of constraint violations exceeding tolerances
+    \item Monthly compreensive project status reports
+
+\end{itemize}
+\subsection{Interdependency of Time, Scope, and Cost}
+
+\par The three constraints are highly interdependent:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Time constraints} limit the extent of features that can be implemented and tested
+    \item \textbf{Scope constraints} ensure focus on core system functionality and prevent schedule overruns
+    \item \textbf{Cost constraints} influence technology choices and limit infrastructure capabilities
 \end{itemize}
 
 \subsection{Corrective Actions}

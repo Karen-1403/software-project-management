@@ -6,12 +6,12 @@
 
 \vspace{12pt}
 
-\noindent This chapter provides an overview of the Online Course Registration Portal project, establishing the context and foundation for the comprehensive project management plan presented in this document.
+\noindent This chapter introduces the Online Course Registration Portal project and sets the foundation for this project management plan.
 
 % ============================================================================
 \section{Purpose}
 
-\par The purpose of this document is to present a comprehensive project management plan for the development and implementation of an Online Course Registration Portal. This document serves as a complete reference guide for all stakeholders involved in the project, including project managers, development teams, quality assurance personnel, academic administrators, and project sponsors.
+\par The purpose of this document is to present a project management plan for the development and implementation of an Online Course Registration Portal. This document serves as a complete reference guide for all stakeholders involved in the project, including project managers, development teams, quality assurance personnel, academic administrators, and project sponsors.
 
 \par This project management plan aims to:
 
@@ -61,13 +61,16 @@
     
     \item[NPV] Net Present Value: The difference between the present value of cash inflows and outflows over time
     
-    \item[PERT] Program Evaluation and Review Technique: A statistical tool for analyzing and representing project tasks
+    \item[PERT] Network analysis technique used to 
+estimate project duration when there is a high 
+degree of uncertainty about the individual activity 
+duration estimates
     
     \item[RACI] Responsible, Accountable, Consulted, Informed: A matrix describing roles and responsibilities
     
-    \item[ROI] Return on Investment: A performance measure to evaluate investment efficiency
+    \item[ROI] Return on Investment: A financial performance metric used to evaluate the efficiency and profitability of an investment, calculated as the ratio of net profit to initial investment cost, expressed as a percentage
     
-    \item[WBS] Work Breakdown Structure: A hierarchical decomposition of project work into smaller components
+    \item[WBS] Work Breakdown Structure: A hierarchical decomposition of project work into smaller manageable components
     
     \item[Prerequisite] A course or requirement that must be completed before enrolling in another course
     
@@ -80,16 +83,21 @@
     \item[Milestone] A significant point or event in the project timeline
     
     \item[Float/Slack] The amount of time an activity can be delayed without affecting the project completion date
+    \item[Free Slack/Free Float] The amount of time an activity can be delayed without delaying the early start of any immediately following activities
+    
+    \item[Total Slack/Total Float] The amount of time an activity may be delayed from its early start without delaying the planned project finish date
     
     \item[Resource Allocation] The process of assigning available resources to project activities
     
     \item[Risk Matrix] A tool for assessing and prioritizing project risks based on probability and impact
+      
+      \item[Project Charter] The foundational document that formally authorizes a project and gives the project manager the authority to apply organizational resources. It ensures all stakeholders start with a shared understanding of the project's goals, scope, and constraints
 \end{description}
 
 % ============================================================================
 \section{Overview}
 
-\par This document is organized into seventeen chapters, each addressing specific aspects of project management for the Online Course Registration Portal. The structure follows industry-standard project management documentation practices and covers all essential project management knowledge areas.
+\par This document is organized into seventeen chapters, each addressing specific aspects of project management for the Online Course Registration Portal. The structure covers all essential project management knowledge areas.
 
 \par The document organization is as follows:
 
@@ -102,7 +110,7 @@
     \item \textbf{Chapters 15-17:} Discuss cost estimation methodologies and project references
 \end{itemize}
 
-\par Each chapter includes relevant diagrams, charts, tables, and calculations created using professional tools such as Microsoft Visio, Microsoft Project, and other industry-standard software.
+\par Each chapter includes relevant diagrams, charts, tables, and calculations created using professional tools such as Microsoft Visio and Microsoft Project.
 
 % ============================================================================
 \section{Assumptions}
@@ -112,69 +120,47 @@
 \subsection{Technical Assumptions}
 
 \begin{enumerate}[leftmargin=*]
-    \item The university infrastructure supports web-based application deployment with adequate server resources
-    \item Existing student information systems provide APIs for data integration
-    \item The development team has access to necessary development tools and environments
-    \item Internet connectivity is available and reliable for both development and production environments
-    \item The university's IT infrastructure supports the expected user load during peak registration periods
+  \item The university infrastructure supports web-based application deployment
+  \item Existing student information systems provide integration capabilities
+  \item Internet connectivity is available for both development and production environments
 \end{enumerate}
 
 \subsection{Resource Assumptions}
 
 \begin{enumerate}[leftmargin=*]
-    \item Required skilled personnel (developers, designers, testers) are available when needed
-    \item Project team members will be dedicated to this project for the specified duration
-    \item Necessary hardware and software resources can be procured within budget constraints
-    \item Stakeholders will be available for regular meetings and decision-making activities
-    \item Training resources are available for system administrators and end-users
+  \item Required personnel (developers, designers, testers) are available during project execution
+  \item Necessary hardware and software resources can be procured within budget
+  \item Key stakeholders will be accessible for decision-making
 \end{enumerate}
 
 \subsection{Schedule Assumptions}
 
 \begin{enumerate}[leftmargin=*]
-    \item The project will commence on the planned start date
-    \item No major holidays or institutional closures will significantly impact the project timeline
-    \item Requirements will be finalized within the allocated timeframe
-    \item Testing and quality assurance activities can proceed in parallel with development activities
-    \item User acceptance testing can be completed before the target semester registration period
+  \item The project starts on the planned date
+  \item Requirements will be finalized within the allocated timeframe
+  \item User acceptance testing completes before the target registration period
 \end{enumerate}
 
 \subsection{Financial Assumptions}
 
 \begin{enumerate}[leftmargin=*]
-    \item Project funding is secured and available according to the planned cash flow
-    \item Currency exchange rates remain relatively stable (for imported technologies or services)
-    \item Inflation rates do not significantly deviate from projected values
-    \item No major economic disruptions will affect project costs
-    \item Vendor pricing remains consistent with initial quotations
+  \item Project funding will be available according to the approved budget schedule
+    \item Foreign exchange rates will not significantly impact costs for external services
+    \item Third-party vendor costs will remain consistent with initial estimates
 \end{enumerate}
 
 \subsection{Stakeholder Assumptions}
 
 \begin{enumerate}[leftmargin=*]
-    \item Academic administrators will provide timely input on business rules and requirements
-    \item Students and faculty will participate in user acceptance testing
-    \item IT department will cooperate in system integration and deployment activities
-    \item Management support remains consistent throughout the project lifecycle
-    \item Change requests will follow established change management procedures
+  \item Stakeholders will provide timely feedback on deliverables
+  \item Key decision-makers will be available for project reviews and approvals
+  \item Requirements will remain stable throughout the planning phase
+  \item Stakeholder commitment to the project objectives remains constant
 \end{enumerate}
 
 \subsection{Quality Assumptions}
 
 \begin{enumerate}[leftmargin=*]
-    \item Industry-standard coding practices and design patterns will be followed
-    \item Code reviews and quality assurance processes will be implemented throughout development
-    \item Security best practices will be applied to protect student data
-    \item The system will comply with relevant data protection and privacy regulations
-    \item Performance requirements can be met with the proposed technical architecture
-\end{enumerate}
-
-\subsection{Risk Assumptions}
-
-\begin{enumerate}[leftmargin=*]
-    \item Identified risks represent the major threats to project success
-    \item Risk mitigation strategies will be effective when implemented
-    \item New risks will be identified and addressed through continuous monitoring
-    \item Contingency reserves are adequate for handling unforeseen issues
-    \item Risk responses can be implemented within project constraints
+  \item Industry-standard coding practices will be followed
+  \item Security best practices will protect student data
 \end{enumerate}
