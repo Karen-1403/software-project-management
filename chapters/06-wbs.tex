@@ -1,5 +1,5 @@
 % ============================================================================
-% CHAPTER 5: WBS
+% CHAPTER 6: WBS
 % ============================================================================
 
 \chapter[Work Breakdown Structure]{Work Breakdown Structure (WBS)}
@@ -28,11 +28,83 @@
 % ============================================================================
 \section{WBS Dictionary Sample}
 
-\par The following table provides a sample of WBS dictionary entries for selected work packages:
+\par The following tables provide WBS dictionary entries for selected work packages across different project phases:
 
 \begin{table}[H]
 \centering
-\caption{WBS Dictionary Sample Entries}
+\caption{WBS Dictionary - Project Charter Development (1.1.1.1)}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{WBS Code} & 1.1.1.1 \\
+\hline
+\textbf{Name} & Project Charter Development \\
+\hline
+\textbf{Description} & Create the formal project charter document that authorizes the project and provides the project manager with authority to apply organizational resources \\
+\hline
+\textbf{Responsible} & Project Manager \\
+\hline
+\textbf{Duration} & 3 days \\
+\hline
+\textbf{Resources} & Project Manager, Sponsor, Business Analyst \\
+\hline
+\textbf{Dependencies} & None (project start activity) \\
+\hline
+\textbf{Deliverables} & Signed project charter, stakeholder register, high-level requirements \\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{WBS Dictionary - Stakeholder Interviews (1.2.1.1)}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{WBS Code} & 1.2.1.1 \\
+\hline
+\textbf{Name} & Stakeholder Interviews \\
+\hline
+\textbf{Description} & Conduct structured interviews with key stakeholders to gather requirements, understand pain points, and identify system expectations \\
+\hline
+\textbf{Responsible} & Business Analyst \\
+\hline
+\textbf{Duration} & 1 week \\
+\hline
+\textbf{Resources} & 2 Business Analysts, Stakeholder time \\
+\hline
+\textbf{Dependencies} & Project charter approval (1.1.1.1), Stakeholder identification (1.1.3.1) \\
+\hline
+\textbf{Deliverables} & Interview transcripts, requirements notes, stakeholder priorities document \\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{WBS Dictionary - Database Schema Design (1.3.2.2)}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{WBS Code} & 1.3.2.2 \\
+\hline
+\textbf{Name} & Database Schema Design \\
+\hline
+\textbf{Description} & Design the complete database schema including tables, relationships, constraints, indexes, and stored procedures for the registration system \\
+\hline
+\textbf{Responsible} & Database Administrator \\
+\hline
+\textbf{Duration} & 1 week \\
+\hline
+\textbf{Resources} & Database Administrator, Data Architect, System Architect \\
+\hline
+\textbf{Dependencies} & ER modeling (1.3.2.1), Requirements documentation (1.2.2, 1.2.3) \\
+\hline
+\textbf{Deliverables} & Database schema document, table definitions, relationship diagrams, normalization documentation \\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{WBS Dictionary - Prerequisite Validation Engine (1.4.1.4)}
 \begin{tabularx}{\textwidth}{|l|X|}
 \hline
 \textbf{WBS Code} & 1.4.1.4 \\
@@ -47,9 +119,129 @@
 \hline
 \textbf{Resources} & 2 Senior Developers, 1 QA Engineer \\
 \hline
-\textbf{Dependencies} & Prerequisite rules definition (1.2.1.3), Database implementation (1.4.1.1) \\
+\textbf{Dependencies} & Prerequisite rules definition (1.2.1.5), Database implementation (1.4.1.1) \\
 \hline
 \textbf{Deliverables} & Functional prerequisite validation module, unit tests, documentation \\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{WBS Dictionary - Student Portal Interface (1.4.2.1)}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{WBS Code} & 1.4.2.1 \\
+\hline
+\textbf{Name} & Student Portal Interface \\
+\hline
+\textbf{Description} & Develop the main student-facing interface for browsing courses, checking prerequisites, and registering for courses \\
+\hline
+\textbf{Responsible} & Frontend Development Team \\
+\hline
+\textbf{Duration} & 3 weeks \\
+\hline
+\textbf{Resources} & 2 Frontend Developers, 1 UI/UX Designer \\
+\hline
+\textbf{Dependencies} & UI design approval (1.3.3), API development (1.4.1.3) \\
+\hline
+\textbf{Deliverables} & Responsive student portal, course search interface, registration workflow screens \\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{WBS Dictionary - System Testing (1.5.2.3)}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{WBS Code} & 1.5.2.3 \\
+\hline
+\textbf{Name} & System Testing \\
+\hline
+\textbf{Description} & Comprehensive end-to-end testing of the entire system to verify all components work together correctly and meet specified requirements \\
+\hline
+\textbf{Responsible} & QA Team Lead \\
+\hline
+\textbf{Duration} & 2 weeks \\
+\hline
+\textbf{Resources} & 3 QA Engineers, Test Manager \\
+\hline
+\textbf{Dependencies} & Integration testing complete (1.5.2.2), All features developed (1.4) \\
+\hline
+\textbf{Deliverables} & System test plan, test cases, test results report, defect log \\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{WBS Dictionary - Application Deployment (1.6.2)}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{WBS Code} & 1.6.2 \\
+\hline
+\textbf{Name} & Application Deployment \\
+\hline
+\textbf{Description} & Deploy the registration system application to production environment including all configuration and verification steps \\
+\hline
+\textbf{Responsible} & DevOps Team \\
+\hline
+\textbf{Duration} & 1 week \\
+\hline
+\textbf{Resources} & DevOps Engineer, System Administrator, DBA \\
+\hline
+\textbf{Dependencies} & Production environment setup (1.6.1), UAT approval, Database migration (1.6.3) \\
+\hline
+\textbf{Deliverables} & Deployed application, deployment checklist, rollback procedures, deployment report \\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{WBS Dictionary - Administrator Training Sessions (1.7.3.1)}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{WBS Code} & 1.7.3.1 \\
+\hline
+\textbf{Name} & Administrator Training Sessions \\
+\hline
+\textbf{Description} & Conduct comprehensive training sessions for system administrators covering system configuration, user management, and troubleshooting \\
+\hline
+\textbf{Responsible} & Training Coordinator \\
+\hline
+\textbf{Duration} & 1 week \\
+\hline
+\textbf{Resources} & 2 Trainers, Technical Writer, Training Facility \\
+\hline
+\textbf{Dependencies} & Training materials (1.7.2), System deployed (1.6.2) \\
+\hline
+\textbf{Deliverables} & Training attendance records, administrator certifications, training feedback surveys \\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{WBS Dictionary - Final Report and Sign-off (1.8.10)}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{WBS Code} & 1.8.10 \\
+\hline
+\textbf{Name} & Final Report and Sign-off \\
+\hline
+\textbf{Description} & Prepare comprehensive final project report and obtain formal sign-off from project sponsor and key stakeholders \\
+\hline
+\textbf{Responsible} & Project Manager \\
+\hline
+\textbf{Duration} & 4 days \\
+\hline
+\textbf{Resources} & Project Manager, Technical Writer \\
+\hline
+\textbf{Dependencies} & All deliverables complete, Lessons learned (1.8.9), Financial closure (1.8.7) \\
+\hline
+\textbf{Deliverables} & Final project report, formal acceptance document, signed project closure certificate \\
 \hline
 \end{tabularx}
 \end{table}

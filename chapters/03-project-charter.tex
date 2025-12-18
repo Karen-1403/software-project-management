@@ -1,120 +1,173 @@
 % ============================================================================
-% CHAPTER 2: PROJECT CHARTER
+% CHAPTER 3: PROJECT CHARTER
 % ============================================================================
 
 \chapter{Project Charter}
 
+\vspace{12pt}
+
 % ============================================================================
-\section{Project Title}
+\section{Project Information}
 
 \begin{table}[H]
 \centering
-\begin{tabularx}{\textwidth}{lX}
-\toprule
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
 \textbf{Project Name} & Online Course Registration Portal \\
-\midrule
+\hline
 \textbf{Project Start Date} & March 1, 2026 \\
+<<<<<<< HEAD
 \textbf{Project End Date} & November 30, 2026 \\
+=======
+\hline
+\textbf{Project End Date} & September 15, 2026 \\
+\hline
+\textbf{Project Duration} & 6.5 months (28 weeks) \\
+\hline
+>>>>>>> 6f80a3487d609ea84c982525bd3981d2f8834572
 \textbf{Project Sponsor} & Professor Gamal Ebrahim \\
+\hline
 \textbf{Project Manager} & Engineer Sally E. Shaker \\
-\bottomrule
+\hline
 \end{tabularx}
 \end{table}
 
 % ============================================================================
 \section{Business Case}
 
-\textbf{Why This Project Is Needed}
-
-\begin{itemize}[leftmargin=*]
-  \item \textbf{The Problem:} Universities require reliable course registration systems to manage large numbers of students registering concurrently while enforcing academic rules. Manual or poorly designed systems often result in prerequisite violations, timetable conflicts, and unfair seat allocation.
-  \item \textbf{The Opportunity:} Automation can significantly improve efficiency, accuracy, and student satisfaction
-  \item \textbf{Purpose:} The purpose of this project is to design and implement a scalable online course registration portal that enforces registration rules automatically, handles concurrent access correctly, and ensures data consistency under high load.
-  \item \textbf{Strategic Context:} Academic institutions need scalable, reliable systems to handle growing student enrollment and complex registration rules while maintaining data integrity under concurrent access
-\end{itemize}
-
-% ============================================================================
-\section{Project Objectives}
-
-The objectives of this project are to achieve the following SMART (Specific, Measurable, Achievable, Relevant, Time-bound) goals:
-
-\begin{enumerate}[leftmargin=*]
-  \item Design and implement a student course registration system
-  \item Enforce academic rules such as prerequisites and credit limits
-  \item Detect and prevent timetable conflicts during registration
-  \item Support waitlists for full courses with fair promotion policies
-  \item Handle concurrent registration requests safely and correctly
-  \item Demonstrate a scalable and maintainable system design
-\end{enumerate}
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{The Problem} & Universities require reliable course registration systems to manage large numbers of students registering concurrently while enforcing academic rules. Manual or poorly designed systems often result in prerequisite violations, timetable conflicts, and unfair seat allocation. \\
+\hline
+\textbf{The Opportunity} & Automation can significantly improve efficiency, accuracy, and student satisfaction \\
+\hline
+\textbf{Purpose} & The purpose of this project is to design and implement a scalable online course registration portal that enforces registration rules automatically, handles concurrent access correctly, and ensures data consistency under high load. \\
+\hline
+\textbf{Strategic Context} & Academic institutions need scalable, reliable systems to handle growing student enrollment and complex registration rules while maintaining data integrity under concurrent access \\
+\hline
+\end{tabularx}
+\end{table}
 
 % ============================================================================
+
+
+
+
+
 \section{Project Description}
 
-The Online Course Registration Portal is a web-based system that automates the course registration process for university students. The system provides a user-friendly interface where students can browse available courses, check prerequisites, register for courses, and manage their academic schedules.
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+The Online Course Registration Portal is a web-based system that automates the course registration process for university students. The system provides a user-friendly interface where students can browse available courses, check prerequisites, register for courses, and manage their academic schedules. \par
+\vspace{6pt}
+The portal enforces all academic policies automatically, including prerequisite validation, credit limit enforcement, and timetable conflict detection. It manages course capacity efficiently through a waitlist system that automatically allocates seats when they become available. The system is designed to handle high concurrent access during peak registration periods while maintaining data consistency and reliability. \par
+\vspace{6pt}
+This project delivers both the technical infrastructure and the functional capabilities required to support modern academic registration workflows in a distributed, scalable environment. \\
+\hline
+\end{tabularx}
+\end{table}
+% ============================================================================
 
-The portal enforces all academic policies automatically, including prerequisite validation, credit limit enforcement, and timetable conflict detection. It manages course capacity efficiently through a waitlist system that automatically allocates seats when they become available. The system is designed to handle high concurrent access during peak registration periods while maintaining data consistency and reliability.
+\section{Project Objectives}
 
-This project delivers both the technical infrastructure and the functional capabilities required to support modern academic registration workflows in a distributed, scalable environment.
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\textbf{SMART Objectives:} \\
+\hline
+1. Design and implement a student course registration system \\
+\hline
+2. Enforce academic rules such as prerequisites and credit limits \\
+\hline
+3. Detect and prevent timetable conflicts during registration \\
+\hline
+4. Support waitlists for full courses with fair promotion policies \\
+\hline
+5. Handle concurrent registration requests safely and correctly \\
+\hline
+6. Demonstrate a scalable and maintainable system design \\
+\hline
+\end{tabularx}
+\end{table}
 
 % ============================================================================
 \section{Project Scope}
 
-\subsection{In Scope}
-
-The project will include the following components and features:
-
-\begin{itemize}[leftmargin=*]
-  \item Student registration and course enrollment functionality
-  \item Prerequisite validation before enrollment
-  \item Timetable conflict detection and prevention
-  \item Course capacity management
-  \item Waitlist handling and automatic seat allocation
-  \item Concurrent access handling (multiple students registering simultaneously)
-  \item Backend logic and REST APIs
-  \item Database schema and design
-  \item System documentation and testing
-\end{itemize}
-
-\subsection{Out of Scope}
-
-The project will NOT include the following:
-
-\begin{itemize}[leftmargin=*]
-  \item Mobile application development
-  \item Payment or tuition processing
-  \item Learning management system (LMS) features
-  \item Advanced analytics or recommendation systems
-
-\end{itemize}
-
-% ============================================================================
-\section{Deliverables}
-
-The project will produce the following tangible outputs:
-
-\begin{enumerate}[leftmargin=*]
-  \item Functional online course registration portal
-  \item Backend system implementing rule enforcement logic
-  \item REST API documentation
-  \item Database schema and design documentation
-  \item Concurrency handling demonstration ( simulations or test cases)
-  \item System architecture and design documentation
-  \item Quality assurance and testing documentation
-  \item User documentation and guides
-  \item Final project report
-\end{enumerate}
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\multicolumn{2}{|c|}{\textbf{In Scope}} \\
+\hline
+\multicolumn{2}{|X|}{
+- Student registration and course enrollment functionality \par
+- Prerequisite validation before enrollment \par
+- Timetable conflict detection and prevention \par
+- Course capacity management \par
+- Waitlist handling and automatic seat allocation \par
+- Concurrent access handling (multiple students registering simultaneously) \par
+- Backend logic and REST APIs \par
+- Database schema and design \par
+- System documentation and testing
+} \\
+\hline
+\multicolumn{2}{|c|}{\textbf{Out of Scope}} \\
+\hline
+\multicolumn{2}{|X|}{
+- Mobile application development \par
+- Payment or tuition processing \par
+- Learning management system (LMS) features \par
+- Advanced analytics or recommendation systems
+} \\
+\hline
+\end{tabularx}
+\end{table}
 
 % ============================================================================
-\section{Stakeholders}
+\section{Project Deliverables}
 
 \begin{table}[H]
 \centering
-\caption{Key Stakeholders and Their Roles}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\textbf{Major Deliverables:} \\
+\hline
+1. Functional online course registration portal \\
+\hline
+2. Backend system implementing rule enforcement logic \\
+\hline
+3. REST API documentation \\
+\hline
+4. Database schema and design documentation \\
+\hline
+5. Concurrency handling demonstration (simulations or test cases) \\
+\hline
+6. System architecture and design documentation \\
+\hline
+7. Quality assurance and testing documentation \\
+\hline
+8. User documentation and guides \\
+\hline
+9. Final project report \\
+\hline
+\end{tabularx}
+\end{table}
+
+% ============================================================================
+\section{Key Stakeholders}
+
+\begin{table}[H]
+\centering
 \begin{tabularx}{\textwidth}{|l|X|}
 \hline
 \textbf{Stakeholder} & \textbf{Role and Interest} \\
 \hline
-Project Sponsor & Provides funding and strategic oversight,champions the project and has ultimate accountability for its success. \\
+Project Sponsor & Provides funding and strategic oversight, champions the project and has ultimate accountability for its success. \\
 \hline
 Project Manager & Responsible for planning, coordination, task allocation and progress tracking, has the authority to assign tasks, manage technical decisions, and ensure adherence to project objectives and deadlines. \\
 \hline
@@ -130,79 +183,83 @@ IT Department & Provides technical infrastructure; concerned with system reliabi
 \end{table}
 
 % ============================================================================
-\section{High-Level Risks \& Assumptions}
+\section{High-Level Risks and Assumptions}
 
-\subsection{Risks}
-
-Significant potential obstacles that could impact the project:
-
-\begin{itemize}[leftmargin=*]
-  \item Integration issues between distributed components
-  \item Race conditions during concurrent registration causing data inconsistencies
-  \item Complexity of prerequisite and conflict rules leading to implementation challenges
-  \item Performance bottlenecks under high user load
-  \item Time limitations affecting testing depth and quality assurance
-  \item Scope creep from stakeholder requests
-  \item Key resource unavailability
-\end{itemize}
-
-\subsection{Assumptions}
-
-Conditions believed to be true for planning purposes:
-
-\begin{itemize}[leftmargin=*]
-  \item Team members are available throughout the semester
-  \item Required tools and frameworks are accessible
-  \item Student and course data are available or can be simulated
-  \item Team members have sufficient technical background
-  \item System will be deployed in a controlled academic environment
-  \item Subject matter experts will be available for consultation
-  \item Necessary computing resources will be provided
-\end{itemize}
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Key Risks}} \\
+\hline
+\multicolumn{2}{|X|}{
+- Integration issues between distributed components \par
+- Race conditions during concurrent registration causing data inconsistencies \par
+- Complexity of prerequisite and conflict rules leading to implementation challenges \par
+- Performance bottlenecks under high user load \par
+- Time limitations affecting testing depth and quality assurance \par
+- Scope creep from stakeholder requests \par
+- Key resource unavailability
+} \\
+\hline
+\multicolumn{2}{|c|}{\textbf{Assumptions}} \\
+\hline
+\multicolumn{2}{|X|}{
+- Team members are available throughout the semester \par
+- Required tools and frameworks are accessible \par
+- Student and course data are available or can be simulated \par
+- Team members have sufficient technical background \par
+- System will be deployed in a controlled academic environment \par
+- Subject matter experts will be available for consultation \par
+- Necessary computing resources will be provided
+} \\
+\hline
+\end{tabularx}
+\end{table}
 
 % ============================================================================
 \section{High-Level Requirements}
 
-\subsection{Functional Requirements}
-
-Main features and capabilities the system must provide:
-
-\begin{enumerate}[leftmargin=*]
-  \item Students can view available courses
-  \item Students can register for courses
-  \item System validates prerequisites before enrollment
-  \item System prevents timetable conflicts
-  \item System manages course capacity and waitlists
-  \item System handles concurrent user registration requests
-  \item System provides enrollment confirmation and notifications
-\end{enumerate}
-
-\subsection{Non-Functional Requirements}
-
-Quality attributes and constraints the system must satisfy:
-
-\begin{enumerate}[leftmargin=*]
-  \item System must support concurrent users
-  \item System must maintain data consistency
-  \item System must be scalable and modular
-  \item System must ensure reliability under high load
-  \item System must expose REST APIs
-  \item System must provide acceptable response times
-  \item System must be maintainable and well-documented
-\end{enumerate}
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Functional Requirements}} \\
+\hline
+\multicolumn{2}{|X|}{
+1. Students can view available courses \par
+2. Students can register for courses \par
+3. System validates prerequisites before enrollment \par
+4. System prevents timetable conflicts \par
+5. System manages course capacity and waitlists \par
+6. System handles concurrent user registration requests \par
+7. System provides enrollment confirmation and notifications
+} \\
+\hline
+\multicolumn{2}{|c|}{\textbf{Non-Functional Requirements}} \\
+\hline
+\multicolumn{2}{|X|}{
+1. System must support concurrent users \par
+2. System must maintain data consistency \par
+3. System must be scalable and modular \par
+4. System must ensure reliability under high load \par
+5. System must expose REST APIs \par
+6. System must provide acceptable response times \par
+7. System must be maintainable and well-documented
+} \\
+\hline
+\end{tabularx}
+\end{table}
 
 % ============================================================================
-\section{High-Level Budget \& Resources}
-
-\subsection{Financial Resources}
+\section{Budget and Resources}
 
 \begin{table}[H]
 \centering
-\caption{Preliminary Budget Estimate}
-\begin{tabular}{|l|r|}
+\begin{tabularx}{\textwidth}{|l|X|r|}
 \hline
-\textbf{Cost Category} & \textbf{Estimated Cost (EGP)} \\
+\multicolumn{3}{|c|}{\textbf{Preliminary Budget Estimate}} \\
 \hline
+<<<<<<< HEAD
 Personnel Costs (Development Team) & 800,000 \\
 \hline
 Project Management & 150,000 \\
@@ -218,78 +275,118 @@ Training and Documentation & 80,000 \\
 Contingency Reserve (10\%) & 145,000 \\
 \hline
 \textbf{Total Estimated Budget} & \textbf{1,595,000} \\
+=======
+\textbf{Category} & \textbf{Description} & \textbf{Cost (EGP)} \\
 \hline
-\end{tabular}
+Personnel and Labor & Development team salaries and wages & 180,000 \\
+\hline
+Infrastructure Services & Cloud hosting, servers, networking & 50,000 \\
+\hline
+Software Licenses and Tools & Development tools, IDEs, testing software & 35,000 \\
+\hline
+Testing and Documentation & QA resources, documentation tools & 40,000 \\
+\hline
+Contingency Reserve & 10\% buffer for unexpected costs & 35,000 \\
+>>>>>>> 6f80a3487d609ea84c982525bd3981d2f8834572
+\hline
+\multicolumn{2}{|r|}{\textbf{Total Estimated Budget}} & \textbf{350,000} \\
+\hline
+\end{tabularx}
 \end{table}
 
-\subsection{Resource Requirements}
-
-\begin{itemize}[leftmargin=*]
-  \item Development team (backend, frontend, database developers)
-  \item Project manager
-  \item Quality assurance / testing resources
-  \item Development tools and software licenses
-  \item Cloud hosting or server infrastructure
-  \item Database management system
-  \item Version control and collaboration tools
-\end{itemize}
-
-% ============================================================================
-\section{High-Level Timeline / Milestones}
-
-Major phases and key deadlines:
-
-\begin{enumerate}[leftmargin=*]
-  \item \textbf{Requirements Analysis \& System Design} \\
-  Define detailed requirements, design system architecture, and create technical specifications
-  
-  \item \textbf{Database Design} \\
-  Design and implement database schema, create ER diagrams, and establish data models
-  
-  \item \textbf{Backend Development} \\
-  Implement core business logic, rule enforcement, and API endpoints
-  
-  \item \textbf{Concurrency Handling \& Testing} \\
-  Implement concurrent access controls, develop test cases, and perform load testing
-  
-  \item \textbf{System Integration} \\
-  Integrate all components, perform end-to-end testing, and resolve integration issues
-  
-  \item \textbf{Final Testing \& Documentation} \\
-  Complete comprehensive testing, finalize documentation, and prepare for deployment
-\end{enumerate}
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\textbf{Resource Requirements:} \\
+\hline
+- Development team (backend, frontend, database developers) \par
+- Project manager \par
+- Quality assurance / testing resources \par
+- Development tools and software licenses \par
+- Cloud hosting or server infrastructure \par
+- Database management system \par
+- Version control and collaboration tools \\
+\hline
+\end{tabularx}
+\end{table}
 
 % ============================================================================
-\section{Success Criteria \& Key Performance Indicators (KPIs)}
+\section{High-Level Timeline and Milestones}
 
-The project will be considered successful if:
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Phase} & \textbf{Description and Activities} \\
+\hline
+Requirements Analysis \& System Design & Define detailed requirements, design system architecture, and create technical specifications \\
+\hline
+Database Design & Design and implement database schema, create ER diagrams, and establish data models \\
+\hline
+Backend and Frontend Development & Implement core business logic, rule enforcement, API endpoints, and user interface components \\
+\hline
+Concurrency Handling \& Testing & Implement concurrent access controls, develop test cases, and perform load testing \\
+\hline
+System Integration & Integrate all components, perform end-to-end testing, and resolve integration issues \\
+\hline
+Final Testing \& Documentation & Complete comprehensive testing, finalize documentation, and prepare for deployment \\
+\hline
+\end{tabularx}
+\end{table}
 
-\begin{enumerate}[leftmargin=*]
-  \item Registration rules are correctly enforced
-  \item No data inconsistencies occur under concurrent access
-  \item Timetable conflicts are accurately detected and prevented
-  \item Waitlists function correctly with fair seat allocation
-  \item System meets academic evaluation criteria
-  \item All functional requirements are implemented
-  \item System passes all test cases
-  \item Documentation is complete and comprehensive
-  \item System demonstrates scalability under load testing
-\end{enumerate}
+% ============================================================================
+\section{Success Criteria and KPIs}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\textbf{The project will be considered successful if:} \\
+\hline
+1. Registration rules are correctly enforced \\
+\hline
+2. No data inconsistencies occur under concurrent access \\
+\hline
+3. Timetable conflicts are accurately detected and prevented \\
+\hline
+4. Waitlists function correctly with fair seat allocation \\
+\hline
+5. System meets academic evaluation criteria \\
+\hline
+6. All functional requirements are implemented \\
+\hline
+7. System passes all test cases \\
+\hline
+8. Documentation is complete and comprehensive \\
+\hline
+9. System demonstrates scalability under load testing \\
+\hline
+\end{tabularx}
+\end{table}
 
 % ============================================================================
 \section{Approval Section}
 
 \vspace{1cm}
 
-This Charter formally authorizes the commencement of the Online Course Registration Portal project.
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{X}
+\textit{This Charter formally authorizes the commencement of the Online Course Registration Portal project.}
+\end{tabularx}
+\end{table}
 
-\vspace{1.5cm}
+\vspace{1cm}
 
+\begin{table}[H]
+\centering
 \begin{tabular}{lcc}
-\textbf{Project Sponsor} & \underline{\hspace{4cm}} & \underline{\hspace{2cm}} \\
-& Signature & Date \\[2cm]
-\textbf{Project Manager} & \underline{\hspace{4cm}} & \underline{\hspace{2cm}} \\
-& Signature & Date \\
+\textbf{Project Sponsor} & \underline{\hspace{5cm}} & \underline{\hspace{2.5cm}} \\
+Professor Gamal Ebrahim & Signature & Date \\[1.5cm]
+\textbf{Project Manager} & \underline{\hspace{5cm}} & \underline{\hspace{2.5cm}} \\
+Engineer Sally E. Shaker & Signature & Date \\
 \end{tabular}
+\end{table}
 
 \vfill

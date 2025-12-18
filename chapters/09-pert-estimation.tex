@@ -1,118 +1,85 @@
 % ============================================================================
-% CHAPTER 8: PERT TIME ESTIMATION
+% CHAPTER 9: PERT TIME ESTIMATION
 % ============================================================================
 
 \chapter{PERT Time Estimation}
 
 \vspace{12pt}
 
-\noindent This chapter presents the Program Evaluation and Review Technique (PERT) time estimates for project activities. PERT uses three-point estimation to account for uncertainty in activity durations.
+\noindent This chapter presents the Program Evaluation and Review Technique (PERT) time estimates for project activities. PERT uses three-point estimation to account for uncertainty in activity durations and provides a more realistic project completion estimate.
 
 % ============================================================================
-\section{PERT Overview}
+\section{What is PERT?}
 
-\par PERT is a statistical tool that uses three time estimates for each activity:
+\par \textbf{PERT} is a network analysis technique used to estimate project duration when there is a high degree of uncertainty about the individual activity duration estimates.
+
+\par PERT uses \textbf{probabilistic time estimates} based on three scenarios for each activity:
 
 \begin{itemize}[leftmargin=*]
-    \item \textbf{Optimistic Time (O):} Minimum time if everything goes perfectly
-    \item \textbf{Most Likely Time (M):} Most realistic time estimate
-    \item \textbf{Pessimistic Time (P):} Maximum time if significant problems occur
+    \item \textbf{Optimistic Time (O):} Best-case scenario -- minimum time if everything goes perfectly
+    \item \textbf{Most Likely Time (M):} Most realistic time estimate -- what typically happens
+    \item \textbf{Pessimistic Time (P):} Worst-case scenario -- maximum time if significant problems occur
 \end{itemize}
 
-\subsection{PERT Formulas}
-
-\par \textbf{Expected Time (TE):}
-\begin{equation}
-TE = \frac{O + 4M + P}{6}
-\end{equation}
-
-\par \textbf{Standard Deviation ($\sigma$):}
-\begin{equation}
-\sigma = \frac{P - O}{6}
-\end{equation}
-
-\par \textbf{Variance ($\sigma^2$):}
-\begin{equation}
-\sigma^2 = \left(\frac{P - O}{6}\right)^2
-\end{equation}
+\par This three-point estimate approach provides a weighted average that accounts for both best and worst-case scenarios.
 
 % ============================================================================
-\section{PERT Time Estimates for All Activities}
+\section{PERT Formula}
+
+\par The PERT weighted average is calculated as:
+
+\begin{equation}
+\text{PERT Weighted Average} = \frac{\text{Optimistic} + 4 \times \text{Most Likely} + \text{Pessimistic}}{6}
+\end{equation}
+
+\subsection{Formula Explanation}
+
+\par The formula gives more weight to the most likely time (4 times) while still considering both optimistic and pessimistic scenarios. This provides a more realistic estimate than simply using the most likely time alone.
+
+
+
+\section{PERT Estimates for Project Activities}
+
+\par The following table shows three-point time estimates for all major project activities and their PERT weighted averages.
 
 \begin{landscape}
 
 \begin{table}[H]
 \centering
-\caption{PERT Three-Point Time Estimates}
+\caption{PERT Three-Point Time Estimates for Project Activities}
 \small
-\begin{tabularx}{\linewidth}{|l|X|c|c|c|c|c|c|}
+\begin{tabularx}{\linewidth}{|c|X|c|c|c|c|l|}
 \hline
-\textbf{ID} & \textbf{Activity Name} & \textbf{O} & \textbf{M} & \textbf{P} & \textbf{TE} & \textbf{$\sigma$} & \textbf{$\sigma^2$} \\
- & & \textbf{(weeks)} & \textbf{(weeks)} & \textbf{(weeks)} & \textbf{(weeks)} & & \\
+\textbf{ID} & \textbf{Activity Name} & \textbf{Optimistic} & \textbf{Most Likely} & \textbf{Pessimistic} & \textbf{PERT Avg} & \textbf{Calculation} \\
+ & & \textbf{(weeks)} & \textbf{(weeks)} & \textbf{(weeks)} & \textbf{(weeks)} & \\
 \hline
-A & Project Initiation & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+A & Project Initiation & 2.5 & 3 & 4 & 3.1 & (2.5+4×3+4)/6 \\
 \hline
-B & Requirements Gathering & 3.0 & 4.0 & 6.0 & 4.17 & 0.50 & 0.25 \\
+B & Requirements Gathering & 1.5 & 2 & 2.5 & 2.0 & (1.5+4×2+2.5)/6 \\
 \hline
-C & Requirements Documentation & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+C & System Design & 0.75 & 1 & 1.5 & 1.0 & (0.75+4×1+1.5)/6 \\
 \hline
-D & System Architecture Design & 2.0 & 3.0 & 5.0 & 3.17 & 0.50 & 0.25 \\
+D & Backend Development & 4.5 & 5 & 6.5 & 5.2 & (4.5+4×5+6.5)/6 \\
 \hline
-E & Database Design & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+E & Frontend Development & 4.5 & 5 & 6 & 5.1 & (4.5+4×5+6)/6 \\
 \hline
-F & UI/UX Design & 2.0 & 3.0 & 5.0 & 3.17 & 0.50 & 0.25 \\
+F & System Integration & 2.5 & 3 & 4 & 3.1 & (2.5+4×3+4)/6 \\
 \hline
-G & Backend Development Setup & 0.5 & 1.0 & 1.5 & 1.00 & 0.17 & 0.03 \\
+G & System Testing & 3.5 & 4 & 5 & 4.1 & (3.5+4×4+5)/6 \\
 \hline
-H & Prerequisite Engine Development & 2.0 & 3.0 & 5.0 & 3.17 & 0.50 & 0.25 \\
+H & User Acceptance Testing & 2.5 & 3 & 4 & 3.1 & (2.5+4×3+4)/6 \\
 \hline
-I & Conflict Detection Module & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+I & Deployment Preparation & 1.5 & 2 & 2.5 & 2.0 & (1.5+4×2+2.5)/6 \\
 \hline
-J & Waitlist Management System & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
+J & System Deployment & 1.5 & 2 & 3 & 2.1 & (1.5+4×2+3)/6 \\
 \hline
-K & Registration Workflow Implementation & 2.0 & 3.0 & 5.0 & 3.17 & 0.50 & 0.25 \\
+K & Training \& Documentation & 3.5 & 4 & 5 & 4.1 & (3.5+4×4+5)/6 \\
 \hline
-L & Frontend Development Setup & 0.5 & 1.0 & 1.5 & 1.00 & 0.17 & 0.03 \\
+L & Post-Deployment Support & 0.75 & 1 & 1.5 & 1.0 & (0.75+4×1+1.5)/6 \\
 \hline
-M & Student Portal Development & 3.0 & 4.0 & 6.0 & 4.17 & 0.50 & 0.25 \\
+M & Project Closure & 1.5 & 2 & 2.5 & 2.0 & (1.5+4×2+2.5)/6 \\
 \hline
-N & Admin Dashboard Development & 2.0 & 3.0 & 5.0 & 3.17 & 0.50 & 0.25 \\
-\hline
-O & Course Catalog Interface & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
-\hline
-P & Timetable Builder Component & 2.0 & 3.0 & 5.0 & 3.17 & 0.50 & 0.25 \\
-\hline
-Q & Frontend-Backend Integration & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
-\hline
-R & SIS Integration & 1.5 & 2.0 & 4.0 & 2.25 & 0.42 & 0.17 \\
-\hline
-S & Authentication Integration & 0.5 & 1.0 & 2.0 & 1.08 & 0.25 & 0.06 \\
-\hline
-T & Email Notification System & 0.5 & 1.0 & 2.0 & 1.08 & 0.25 & 0.06 \\
-\hline
-U & Unit Testing & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
-\hline
-V & Integration Testing & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
-\hline
-W & System Testing & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
-\hline
-X & Performance Testing & 0.5 & 1.0 & 2.0 & 1.08 & 0.25 & 0.06 \\
-\hline
-Y & Security Testing & 0.5 & 1.0 & 2.0 & 1.08 & 0.25 & 0.06 \\
-\hline
-Z & User Acceptance Testing & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
-\hline
-AA & Deployment Planning & 0.5 & 1.0 & 1.5 & 1.00 & 0.17 & 0.03 \\
-\hline
-AB & Production Deployment & 0.5 & 1.0 & 2.0 & 1.08 & 0.25 & 0.06 \\
-\hline
-AC & Training Material Development & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
-\hline
-AD & Training Delivery & 0.5 & 1.0 & 1.5 & 1.00 & 0.17 & 0.03 \\
-\hline
-AE & Go-Live Support & 1.5 & 2.0 & 3.0 & 2.08 & 0.25 & 0.06 \\
-\hline
-AF & Project Closure & 0.5 & 1.0 & 1.5 & 1.00 & 0.17 & 0.03 \\
+\multicolumn{5}{|r|}{\textbf{Total PERT Duration:}} & \textbf{37.9 weeks} & \\
 \hline
 \end{tabularx}
 \end{table}
@@ -120,104 +87,55 @@ AF & Project Closure & 0.5 & 1.0 & 1.5 & 1.00 & 0.17 & 0.03 \\
 \end{landscape}
 
 % ============================================================================
-\section{Critical Path PERT Analysis}
+\section{Comparison: Deterministic vs. PERT Estimates}
 
-\par Calculating the expected duration and variance for the critical path:
+\par Comparing the original deterministic (single-point) estimates from the AON analysis with the PERT weighted averages:
 
 \begin{table}[H]
 \centering
-\caption{Critical Path PERT Summary}
-\begin{tabular}{|l|c|c|}
+\caption{Deterministic vs. PERT Duration Comparison}
+\begin{tabular}{|l|c|c|c|}
 \hline
-\textbf{Metric} & \textbf{Value} & \textbf{Unit} \\
+\textbf{Estimate Type} & \textbf{Duration} & \textbf{Basis} & \textbf{Risk Coverage} \\
 \hline
-Sum of Expected Times (TE) & 34.75 & weeks \\
+Deterministic (AON) & 28 weeks & Single estimate & Low \\
 \hline
-Sum of Variances ($\Sigma\sigma^2$) & 1.79 & weeks² \\
+PERT Weighted Average & 37.9 weeks & Three-point estimate & High \\
 \hline
-Critical Path Standard Deviation & 1.34 & weeks \\
+\textbf{Difference} & \textbf{+9.9 weeks} & \textbf{Risk buffer} & \\
 \hline
 \end{tabular}
 \end{table}
 
-% ============================================================================
-\section{Project Duration Probability Analysis}
 
-\par Using the PERT analysis, we can calculate probabilities for project completion times.
+\section{PERT Analysis Interpretation}
 
-\subsection{Z-Score Calculations}
 
-\par For a target completion time (T), the Z-score is:
-\begin{equation}
-Z = \frac{T - TE_{total}}{\sigma_{critical path}}
-\end{equation}
 
-\subsection{Probability Scenarios}
+\subsection{Activities with High Uncertainty}
 
-\begin{table}[H]
-\centering
-\caption{Probability of Completing Project by Target Date}
-\begin{tabular}{|c|c|c|c|}
-\hline
-\textbf{Target Duration} & \textbf{Z-Score} & \textbf{Probability} & \textbf{Confidence} \\
-\textbf{(weeks)} & & & \\
-\hline
-33 & -1.31 & 9.5\% & Very Low \\
-\hline
-34 & -0.56 & 28.8\% & Low \\
-\hline
-35 & 0.19 & 57.5\% & Moderate \\
-\hline
-36 & 0.93 & 82.4\% & High \\
-\hline
-37 & 1.68 & 95.4\% & Very High \\
-\hline
-38 & 2.43 & 99.2\% & Near Certain \\
-\hline
-\end{tabular}
-\end{table}
-
-\subsection{Interpretation}
+\par Activities where pessimistic time is higher than optimistic (showing uncertainty):
 
 \begin{itemize}[leftmargin=*]
-    \item There is approximately 57.5\% probability of completing in 35 weeks
-    \item For 82.4\% confidence, allow 36 weeks (2 weeks buffer)
-    \item For 95\% confidence level, plan for 37 weeks completion
-    \item Original estimate of 34 weeks has only 28.8\% probability of success
+    \item \textbf{Backend Development (D):} 4.5-6.5 weeks range (moderate risk: complex prerequisite validation)
+    \item \textbf{Frontend Development (E):} 4.5-6 weeks range (moderate risk: UI/UX iterations)
+    \item \textbf{System Testing (G):} 3.5-5 weeks range (moderate risk: bug discovery and fixes)
+    \item \textbf{User Acceptance Testing (H):} 2.5-4 weeks range (moderate risk: stakeholder availability)
 \end{itemize}
 
 % ============================================================================
 \section{Recommendations}
 
-\par Based on PERT analysis:
+\par Based on the PERT analysis, the following recommendations are made:
 
 \begin{enumerate}[leftmargin=*]
-    \item \textbf{Add Buffer Time:} Include 2-3 weeks buffer for high confidence
-    \item \textbf{Monitor High-Variance Activities:} Focus on activities with $\sigma > 0.40$
-    \item \textbf{Early Start Critical Activities:} Begin prerequisite engine and requirements early
-    \item \textbf{Resource Backup Plans:} Have contingency for integration activities
-    \item \textbf{Regular Re-estimation:} Update PERT estimates as project progresses
+    
+    \item \textbf{Monitor High-Risk Activities:} Closely track Backend Development, Frontend Development, and Testing phases
+    
+    \item \textbf{Early Risk Mitigation:} Start risk mitigation activities early for activities with wide time ranges
+    
+    \item \textbf{Regular Re-estimation:} Update PERT estimates as work progresses and uncertainty decreases
+    
+    \item \textbf{Communicate Realistically:} Inform stakeholders that 28 weeks is optimistic; 39=8 weeks is more realistic
+\par \textbf{Final Recommendation:} Communicate a \textbf{38-40 week timeline} to stakeholders while internally targeting 28-30 weeks to maximize efficiency.
 \end{enumerate}
-
-% ============================================================================
-\section{Risk-Based Schedule Buffer}
-
-\begin{table}[H]
-\centering
-\caption{Recommended Schedule Buffers}
-\begin{tabular}{|l|c|l|}
-\hline
-\textbf{Confidence Level} & \textbf{Buffer} & \textbf{Rationale} \\
-\hline
-70\% & 1 week & Minimum acceptable buffer \\
-\hline
-80\% & 2 weeks & Recommended for this project \\
-\hline
-90\% & 2.5 weeks & Conservative estimate \\
-\hline
-95\% & 3 weeks & Very conservative, high assurance \\
-\hline
-\end{tabular}
-\end{table}
-
-\par \textbf{Recommendation:} Adopt a 36-week project timeline (34.75 + 2 weeks buffer) for approximately 82\% confidence in meeting the deadline.
