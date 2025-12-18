@@ -102,3 +102,6 @@ venv/
 # Note: Keep the images folder but ignore specific temporary files
 images/*.tmp
 images/*-old.*
+
+# references folder
+references/
